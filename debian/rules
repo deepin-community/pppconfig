@@ -1,0 +1,66 @@
+#!/usr/bin/make -f
+# $Id: rules,v 1.4 2004/07/19 19:25:14 john Exp $
+# Made with the aid of dh_make, by Craig Small
+# Sample debian/rules that uses debhelper. GNU copyright 1997 by Joey Hess.
+# Some lines taken from debmake, by Cristoph Lameter.
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	po4a man/po4a.cfg
+	for F in `cat po/LINGUAS`; do \
+	  msgfmt -o po/$$F.mo po/$$F.po; \
+	done
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp install-stamp
+	rm -f po/*.mo
+	po4a --rm-translations man/po4a.cfg
+	dh_clean
+
+install: install-stamp
+install-stamp: build-stamp
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	install -g root -o root -m 700 pppconfig `pwd`/debian/pppconfig/usr/sbin
+	for F in `cat po/LINGUAS`; do \
+	  mkdir -p `pwd`/debian/pppconfig/usr/share/locale/$$F/LC_MESSAGES && cp po/$$F.mo `pwd`/debian/pppconfig/usr/share/locale/$$F/LC_MESSAGES/pppconfig.mo; \
+	done
+	touch install-stamp
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installexamples
+	dh_installmenu --noscripts
+	dh_installcron --noscripts
+	dh_lintian
+	dh_installman man/*.8
+	dh_installchangelogs
+	cp 0dns-up debian/pppconfig/etc/ppp/ip-up.d/
+	cp 0dns-down debian/pppconfig/etc/ppp/ip-down.d/
+	cp dns-clean debian/pppconfig/etc/init.d/
+	cp dns-clean.service debian/pppconfig/lib/systemd/system/
+	dh_systemd_enable
+	dh_systemd_start
+	dh_compress
+	dh_fixperms
+	chmod 755 debian/pppconfig/etc/ppp/ip-down.d/0dns-down
+	chmod 755 debian/pppconfig/etc/init.d/dns-clean
+	chmod 755 debian/pppconfig/etc/ppp/ip-up.d/0dns-up
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch: build install
+
+binary: binary-indep binary-arch
+
+.PHONY: build clean binary-indep binary-arch binary

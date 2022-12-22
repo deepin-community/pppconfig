@@ -1,0 +1,464 @@
+# Translation of pppconfig man page template to German
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2011.
+# This file is distributed under the same license as the pppconfig package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pppconfig man page\n"
+"POT-Creation-Date: 2011-06-01 16:39+0300\n"
+"PO-Revision-Date: 2011-06-01 16:45+0200\n"
+"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
+"Language-Team: de <debian-l10n-german@lists.debian.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+
+#. type: TH
+#: man/pppconfig.8:2
+#, no-wrap
+msgid "PPPCONFIG"
+msgstr "PPPCONFIG"
+
+#. type: TH
+#: man/pppconfig.8:2
+#, no-wrap
+msgid "Version 2.3.16"
+msgstr "Version 2.3.16"
+
+#. type: TH
+#: man/pppconfig.8:2
+#, no-wrap
+msgid "Debian GNU/Linux"
+msgstr "Debian GNU/Linux"
+
+#. type: SH
+#: man/pppconfig.8:3
+#, no-wrap
+msgid "NAME"
+msgstr "NAME"
+
+#. type: Plain text
+#: man/pppconfig.8:5
+msgid "pppconfig - configure pppd to connect to the Internet"
+msgstr "pppconfig - konfiguriert Pppd für Verbindungen in das Internet"
+
+#. type: SH
+#: man/pppconfig.8:5
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "ÜBERSICHT"
+
+#. type: Plain text
+#: man/pppconfig.8:8
+msgid ""
+"B<pppconfig> [--version] | [--help] | [[--dialog] | [--whiptail] | [--"
+"gdialog] [--noname] | [providername]]"
+msgstr ""
+"B<pppconfig> [--version] | [--help] | [[--dialog] | [--whiptail] | [--"
+"gdialog] [--noname] | [Provider-Name]]"
+
+#. type: SH
+#: man/pppconfig.8:9
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "BESCHREIBUNG"
+
+#. type: Plain text
+#: man/pppconfig.8:22
+msgid ""
+"B<pppconfig> is a B<dialog> based interactive, menu driven utility to help "
+"automate setting up a dial out ppp connection.  It provides extensive "
+"explanations at each step.  pppconfig supports PAP, CHAP, and chat methods "
+"of authentication.  It uses the standard ppp configuration files and sets "
+"ppp up so that the standard pon and poff commands can be used to control "
+"ppp.  Some features supported by pppconfig are:"
+msgstr ""
+"B<pppconfig> ist ein auf B<Dialog> basierendes, interaktives, menügesteuert "
+"Hilfswerkzeug, um beim automatischen Einrichten einer PPP-Einwählverbindung "
+"zu helfen. Es stellt bei jedem Schritt umfangreiche Erläuterungen bereit. "
+"Pppconfig unterstützt PAP, CHAP und Chat-Methoden zur Authentifizierung. Es "
+"verwendet normale PPP-Konfigurationsdateien und richtet PPP so ein, dass die "
+"normalen Befehle »pon« und »poff« zum Steuern von Ppp verwandt werden "
+"können. Einige der von Pppconfig unterstützten Funktionen sind:"
+
+#. type: Plain text
+#: man/pppconfig.8:24
+msgid "- Multiple ISP's with separate nameservers."
+msgstr ""
+"- Mehrere ISPs (Internet-Einwahldienstleister) mit verschiedenen Nameservern"
+
+#. type: Plain text
+#: man/pppconfig.8:26
+msgid "- Modem detection."
+msgstr "- Modem-Erkennung"
+
+#. type: Plain text
+#: man/pppconfig.8:28
+msgid "- Dynamic DNS."
+msgstr "- Dynamisches DNS"
+
+#. type: Plain text
+#: man/pppconfig.8:30
+msgid "- Dial on demand."
+msgstr "- Einwahl auf Verlangen"
+
+#. type: Plain text
+#: man/pppconfig.8:32
+msgid "- Allow non-root users to run ppp."
+msgstr "- Erlaubt normalen Benutzern, Ppp auszuführen"
+
+#. type: Plain text
+#: man/pppconfig.8:34
+msgid "- Uses the gdialog GUI dialog replacement if possible."
+msgstr ""
+"- Verwendet die graphische Benutzerschnittstelle Gdialog als Ersatz für "
+"Dialog wo möglich"
+
+#. type: Plain text
+#: man/pppconfig.8:44
+msgid ""
+"Before running pppconfig you should know what sort of authentication your "
+"isp requires, the username and password that they want you to use, and the "
+"phone number.  If they require you to use chat authentication, you will also "
+"need to know the login and password prompts and any other prompts and "
+"responses required for login.  If you can't get this information from your "
+"isp you could try dialing in with minicom and working through the procedure "
+"until you get the garbage that indicates that ppp has started on the other "
+"end."
+msgstr ""
+"Bevor Sie Pppconfig ausführen, sollten Sie die Art der Authentifizierung "
+"Ihres ISPs, den zu verwendenden Benutzernamen und das Passwort und die "
+"Telefonnummer kennen. Falls Chat-Authentifizierung verwandt werden muss, "
+"müssen Sie auch die Anmelde- und Passworteingabeaufforderungen sowie alle "
+"für die Anmeldung relevanten weiteren Eingabeaufforderungen und "
+"Rückmeldungen kennen. Falls Sie diese Informationen nicht von Ihrem ISP "
+"bekommen können, können Sie eine Einwahl mit Minicom versuchen und sich "
+"durch die Anmeldeprozedur arbeiten, bis Sie Müll erhalten, woran Sie den "
+"Start von PPP auf der anderen Seite erkennen."
+
+#. type: Plain text
+#: man/pppconfig.8:52
+msgid ""
+"B<pppconfig> allows you to configure connections to multiple providers.  For "
+"example, you might call your isp 'provider', your employer 'theoffice' and "
+"your university 'theschool'.  Then you can connect to your isp with 'pon', "
+"your office with 'pon theoffice', and your university with 'pon theschool'."
+msgstr ""
+"B<pppconfig> erlaubt Ihnen Verbindungen zu mehreren Anbietern zu "
+"konfigurieren. Beispielsweise könnten Sie Ihren ISP »provider«, Ihren "
+"Arbeitgeber »Büro« und Ihre Universität »Schule« nennen. Dann können Sie "
+"sich mit Ihrem ISP mit »pon«, mit Ihrem Büro mit »pon Büro« und mit Ihrer "
+"Universität mit »pon Schule« verbinden."
+
+#. type: Plain text
+#: man/pppconfig.8:55
+msgid ""
+"It can determine which serial port your modem is on, but the serial port "
+"must already be configured.  This is normally done when installing Linux."
+msgstr ""
+"Es kann ermitteln, an welcher seriellen Schnittstelle sich Ihr Modem "
+"befindet. Dazu muss vorher die serielle Schnittstelle konfiguriert worden "
+"sein, was normalerweise bei der Installation von Linux erfolgt."
+
+# FIXME \(em verwenden? 
+#. type: Plain text
+#: man/pppconfig.8:58
+msgid ""
+"It can help you set your nameservers, or, if your ISP uses 'dynamic DNS', it "
+"can set up ppp to use that."
+msgstr ""
+"Es kann bei der Einrichtung der Nameserver helfen oder -- falls Ihr ISP "
+"»dynamic DNS« (dynamisches DNS) verwendet -- kann es PPP so einrichten, dass "
+"es dies verwendet."
+
+#. type: Plain text
+#: man/pppconfig.8:63
+msgid ""
+"It can configure ppp for demand dialing, so that your ppp connection will "
+"come up automatically.  It will not, however, start pppd for you.  You must "
+"still start pppd yourself ('pon' will do it).  Pppd will then wait in the "
+"background for you to attempt to access the Net and bring up the link."
+msgstr ""
+"Es kann Ppp für die Einwahl auf Verlangen konfigurieren, so dass Ihre PPP-"
+"Verbindungen automatisch aufgebaut wird. Allerdings wird es nicht Pppd für "
+"Sie starten. Sie müssen weiterhin Pppd selbst starten (»pon« erledigt dies). "
+"Pppd wird dann im Hintergrund darauf warten, dass Sie auf das Netz "
+"zugreifen, und dann die Verbindung aufbauen."
+
+# FIXME Lokalisierung?
+#. type: Plain text
+#: man/pppconfig.8:75
+msgid ""
+"If you select \"Static\" in the \"Configure Nameservers\" screen pppconfig "
+"will create a file in the /etc/ppp/resolv directory named after the provider "
+"you are configuring and containing \"nameserver\" lines for each of the IP "
+"numbers you gave.  This file will be substituted for /etc/resolv.conf when "
+"the connection comes up.  The provider name is passed in the ipparam "
+"variable so that 0dns-up knows which file to use.  The original resolv.conf "
+"will be put back when the connection goes down.  You can edit this file if "
+"you wish and add such things as \"search\" or \"domain\" directives or "
+"additional nameservers.  Be sure and read the resolv.conf man page first, "
+"though.  The \"search\" and \"domain\" directives probably do not do what "
+"you think they do."
+msgstr ""
+"Falls Sie im Bildschirm »Namensserver konfigurieren« den Wert »Static« "
+"auswählen, wird Pppconfig eine Datei im Verzeichnis /etc/ppp/resolv mit dem "
+"Namen des Anbieters, den Sie gerade konfigurieren, erstellen. In dieser "
+"Datei werden die »nameserver«-Zeilen für jede angegebene IP-Nummer "
+"eingetragen. Diese Datei ersetzt /etc/resolv.conf, wenn die Verbindung "
+"aufgebaut wurde. Der Name des Anbieters wird in der Variablen »ipparam« "
+"übergeben, so dass 0dns-up weiß, welche Datei zu verwenden ist. Die "
+"ursprüngliche resolv.conf wird zurück transferiert, wenn die Verbindung "
+"wieder abgebaut wurde. Sie können diese Datei bearbeiten, wenn Sie möchten, "
+"und Direktiven wie »search« oder »domain« oder zusätzliche Nameserver "
+"hinzufügen. Lesen Sie auf jeden Fall zuerst die Handbuchseite von resolv."
+"conf durch. Die Direktiven »search« und »domain« erledigen wahrscheinlich "
+"nicht das, was Sie von Ihnen erwarten."
+
+# FIXME Lokalisierung?
+#. type: Plain text
+#: man/pppconfig.8:83
+msgid ""
+"If you select \"dynamic\" in the \"Configure Nameservers\" screen pppconfig "
+"will configure pppd for 'dynamic DNS' and create a file in the /etc/ppp/"
+"resolv directory named after the provider you are configuring but containing "
+"nothing.  When the connection comes up the nameservers supplied by your ISP "
+"will be added and the file substituted for /etc/resolv.conf.  You can edit "
+"this file if you wish and add such things as \"search\" or \"domain\" "
+"directives or additional nameservers."
+msgstr ""
+"Falls Sie im Bildschirm »Namensserver konfigurieren« den Wert »dynamic« "
+"auswählen, wird Pppd für »dynamic DNS« konfiguriert und Pppconfig eine Datei "
+"im Verzeichnis /etc/ppp/resolv mit dem Namen des Anbieters, den Sie gerade "
+"konfigurieren, erstellen. Diese Datei wird nichts enthalten. Wenn die "
+"Verbindung aufgebaut wird, werden die von Ihrem ISP übergebenen Nameserver "
+"hinzugefügt und diese Datei an Stelle von /etc/resolv.conf verwandt. Sie "
+"können diese Datei bearbeiten, wenn Sie möchten, und Direktiven wie »search« "
+"oder »domain« oder zusätzliche Nameserver hinzufügen."
+
+#. type: Plain text
+#: man/pppconfig.8:88
+msgid ""
+"If you select \"None\" in the \"Configure Nameservers\" screen pppconfig "
+"will create no file in /etc/ppp/resolv and will leave /etc/resolv.conf "
+"alone. ipparam is not set to the provider name and so is free for the "
+"administrator to use."
+msgstr ""
+"Falls Sie im Bildschirm »Namensserver konfigurieren« den Wert »None« "
+"auswählen, wird Pppconfig keine Datei in /etc/ppp/resolv erstellen und /etc/"
+"resolv.conf in Ruhe lassen. »ipparam« wird nicht auf den Namen des Anbieters "
+"gesetzt und kann daher vom Administrator frei verwandt werden."
+
+#. type: SH
+#: man/pppconfig.8:89
+#, no-wrap
+msgid "FILES"
+msgstr "DATEIEN"
+
+#. type: Plain text
+#: man/pppconfig.8:92
+msgid ""
+"B</etc/ppp/peers/provider> is the standard pppd options file for the default "
+"service provider."
+msgstr ""
+"B</etc/ppp/peers/provider> ist die Standard-Optionsdatei für Pppd für den "
+"voreingestellten Diensteanbieter."
+
+#. type: Plain text
+#: man/pppconfig.8:95
+msgid ""
+"B</etc/ppp/peers/E<lt>nameE<gt>> is the pppd options file for the provider "
+"that you have named E<lt>nameE<gt>."
+msgstr ""
+"B</etc/ppp/peers/E<lt>NameE<gt>> ist die Optionsdatei von Pppd für den "
+"Anbieter mit dem Namen E<lt>NameE<gt>."
+
+#. type: Plain text
+#: man/pppconfig.8:98
+msgid ""
+"B</etc/ppp/peers/provider.bak> is a backup copy of /etc/ppp/peers/provider."
+msgstr ""
+"B</etc/ppp/peers/provider.bak> ist eine Sicherungskopie von /etc/ppp/peers/"
+"provider."
+
+#. type: Plain text
+#: man/pppconfig.8:101
+msgid ""
+"B</etc/chatscripts/provider> is the standard chat script for the default "
+"service provider."
+msgstr ""
+"B</etc/chatscripts/provider> ist das Standard-Chat-Skript für den "
+"voreingestellten Diensteanbieter."
+
+#. type: Plain text
+#: man/pppconfig.8:104
+msgid ""
+"B</etc/chatscripts/E<lt>nameE<gt>> is the chat script for the provider that "
+"you have named E<lt>nameE<gt>."
+msgstr ""
+"B</etc/chatscripts/E<lt>NameE<gt>> ist das Chat-Skript für den Anbieter mit "
+"dem Namen E<lt>NameE<gt>."
+
+#. type: Plain text
+#: man/pppconfig.8:107
+msgid ""
+"B</etc/chatscripts/provider.bak> is a backup copy of /etc/chatscripts/"
+"provider."
+msgstr ""
+"B</etc/chatscripts/provider.bak> ist eine Sicherungskopie von /etc/"
+"chatscripts/provider."
+
+#. type: Plain text
+#: man/pppconfig.8:110
+msgid ""
+"B</etc/ppp/resolv> is a directory where resolv.conf files for each provider "
+"are stored."
+msgstr ""
+"B</etc/ppp/resolv> ist ein Verzeichnis, in dem die resolv.conf-Dateien für "
+"jeden Anbieter gespeichert werden."
+
+#. type: Plain text
+#: man/pppconfig.8:114
+msgid ""
+"B</etc/ppp/ip-up.d/0dns-up> is a script that arranges for the correct resolv."
+"conf file to be copied into place when a connection comes up."
+msgstr ""
+"B</etc/ppp/ip-up.d/0dns-up> ist ein Skript, dass dafür sorgt, dass die "
+"korrekte resolv.conf-Datei an den richtigen Platz kopiert wird, wenn die "
+"Verbindung aufgebaut wird."
+
+#. type: Plain text
+#: man/pppconfig.8:118
+msgid ""
+"B</etc/ppp/ip-down.d/0dns-down> is a script that arranges for the original "
+"resolv.conf file to be copied into place when a connection goes down."
+msgstr ""
+"B</etc/ppp/ip-down.d/0dns-down> ist ein Skript, dass dafür sorgt, dass die "
+"ursprüngliche resolv.conf-Datei an den richtigen Platz kopiert wird, wenn "
+"die Verbindung abgebaut wird."
+
+#. type: Plain text
+#: man/pppconfig.8:122
+msgid ""
+"B</etc/init.d/dns-clean> is a script that runs 0dns-down at bootup to clean "
+"up any mess left by a crash."
+msgstr ""
+"B</etc/init.d/dns-clean> ist ein Skript, das 0dns-down beim Systemstart "
+"ausführt, um alle Überbleibsel nach einem Systemabsturz zu entfernen."
+
+#. type: Plain text
+#: man/pppconfig.8:125
+msgid ""
+"B</var/run/pppconfig> is a directory where temporary files created by 0dns-"
+"up are stored."
+msgstr ""
+"B</var/run/pppconfig> ist ein Verzeichnis, in dem alle von 0dns-up "
+"erstellten temporären Dateien gespeichert werden."
+
+#. type: Plain text
+#: man/pppconfig.8:129
+msgid ""
+"B</var/run/pppconfig/resolv.conf.bak.E<lt>providerE<gt>> is a backup copy of "
+"the original resolv.conf file.  0dns-down restores /etc/resolv.conf from it."
+msgstr ""
+"B</var/run/pppconfig/resolv.conf.bak.E<lt>AnbieterE<gt>> ist eine "
+"Sicherungskopie der ursprünglichen Datei resolv.conf. 0dns-down stellt "
+"daraus /etc/resolv.conf wieder her."
+
+#. type: Plain text
+#: man/pppconfig.8:134
+msgid ""
+"B</var/run/pppconfig/0dns.E<lt>providerE<gt>> is a backup copy of the resolv."
+"conf file for E<lt>providerE<gt>.  0dns-down uses it to determine if /etc/"
+"resolv.conf has been overwritten by another process."
+msgstr ""
+"B</var/run/pppconfig/0dns.E<lt>AnbieterE<gt>> ist eine Sicherungskopie von "
+"resolv.conf für E<lt>AnbieterE<gt>. 0dns-down verwendet es, um zu ermitteln, "
+"ob /etc/resolv.conf von einem anderen Prozess überschrieben wurde."
+
+#. type: Plain text
+#: man/pppconfig.8:141
+msgid ""
+"B</etc/ppp/pap-secrets> and B</etc/ppp/chap-secrets> are described in the "
+"pppd documentation.  pppconfig may add lines to these files and will change "
+"lines that it previously added."
+msgstr ""
+"B</etc/ppp/pap-secrets> und B</etc/ppp/chap-secrets> werden in der "
+"Dokumentation von Pppd beschrieben. Pppconfig kann zu diesen Dateien Zeilen "
+"hinzufügen und es wird Zeilen ändern, die es vorher hinzugefügt hat."
+
+#. type: SH
+#: man/pppconfig.8:141
+#, no-wrap
+msgid "NOTES"
+msgstr "ANMERKUNGEN"
+
+#. type: Plain text
+#: man/pppconfig.8:144
+msgid "B<pppconfig> requires pppd 2.3.7 or higher."
+msgstr "B<pppconfig> benötigt Pppd 2.3.7 oder neuer."
+
+#. type: SH
+#: man/pppconfig.8:144
+#, no-wrap
+msgid "TO DO"
+msgstr "OFFEN"
+
+#. type: Plain text
+#: man/pppconfig.8:146
+msgid "Add full support for MSCHAP."
+msgstr "Komplette Unterstützung für MSCHAP hinzufügen"
+
+#. type: SH
+#: man/pppconfig.8:146
+#, no-wrap
+msgid "BUGS"
+msgstr "FEHLER"
+
+#. type: Plain text
+#: man/pppconfig.8:148
+msgid "Don't tell pppconfig to find your modem while pppd is running."
+msgstr ""
+"Versuchen Sie nicht, mit Pppconfig Ihr Modem zu finden, während Pppd läuft."
+
+#. type: SH
+#: man/pppconfig.8:148
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "SIEHE AUCH"
+
+#. type: Plain text
+#: man/pppconfig.8:152
+msgid ""
+"B<chat(8), gpppon(1), plog(1), poff(1), pon(1), pppd(8),> and B<whiptail(1).>"
+msgstr ""
+"B<chat(8)>, B<gpppon(1)>, B<plog(1)>, B<poff(1)>, B<pon(1)>, B<pppd(8)> und "
+"B<whiptail(1)>."
+
+#. type: SH
+#: man/pppconfig.8:152
+#, no-wrap
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+#. type: Plain text
+#: man/pppconfig.8:155
+msgid "B<pppconfig> was written by John Hasler E<lt>jhasler@debian.orgE<gt>."
+msgstr ""
+"B<pppconfig> wurde von John Hasler E<lt>jhasler@debian.orgE<gt> geschrieben."
+
+#. type: SH
+#: man/pppconfig.8:155
+#, no-wrap
+msgid "COPYRIGHT"
+msgstr "COPYRIGHT"
+
+#. type: Plain text
+#: man/pppconfig.8:158
+msgid ""
+"B<This man page may be treated as if it were> B<in the public domain. I "
+"waive all rights.>"
+msgstr ""
+"Diese Handbuchseite kann so behandelt werden, als ob sie Teil des »Public "
+"Domain« wäre. Ich verzichte auf alle Rechte."

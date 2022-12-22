@@ -1,0 +1,5 @@
+PO4A-HEADER: mode=after; position=DROITS D'AUTEURS; beginboundary=^\.SH
+
+.SH TRADUCTION
+Raphaël 'SurcouF' Bordet <debian-l10n-french@lists.debian.org>
+

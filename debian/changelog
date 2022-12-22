@@ -1,0 +1,908 @@
+pppconfig (2.3.25) unstable; urgency=medium
+
+  * QA upload.
+  * Remove dh-systemd Build-Depends, move to debhelper 10.
+    (Closes: #958607)
+  * Remove pppconfig.lintian-overrides, contained removed
+    override init.d-script-missing-dependency-on-remote_fs
+    throwing lintian E.
+
+ -- Ryan Finnie <ryan@finnie.org>  Thu, 05 Nov 2020 14:59:44 -0800
+
+pppconfig (2.3.24) unstable; urgency=medium
+
+  * QA upload.
+  * Fix FTBS.
+
+ -- Adam Borowski <kilobyte@angband.pl>  Mon, 23 Mar 2020 00:32:23 +0100
+
+pppconfig (2.3.23) unstable; urgency=medium
+
+  * QA upload.
+  * dns-clean.service: Use mkdir -p to not fail in case directory
+    already exists. Closes: #826040.
+  [ Frans Spiesschaert ]
+  * Update nl.po. Closes: #801385.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 05 Jun 2016 12:28:38 +0200
+
+pppconfig (2.3.22) unstable; urgency=medium
+
+  * QA upload.
+  * debian/rules: Drop "po/update.sh". Running it only once
+    before creating the source package will do fine.
+    This should help to make the build reproducible.
+  * po/update.sh: Create po/LINGUAS.
+  * debian/rules: Use it and perform some cleanup.
+  * messages.mo: Remove, as it's just an old version of po/zh_TW.po.
+  [ Américo Monteiro ]
+  * Added Portuguese manpage. Closes: #759112.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 28 Aug 2015 17:08:36 +0200
+
+pppconfig (2.3.21) unstable; urgency=low
+
+  * QA upload
+  * Fixed Maintainer field to contain correct QA group address
+  * Fixed start sequence in dns-clean LSB header
+    (thanks to Jon Severinsson)
+  * Don't require start of $remote_fs in dns-clean init script,
+    it has to run before that. Override lintian error, when /usr
+    is on a remote location, pppconfig can not do anything and is
+    useless in that scenario (init script simply exit then).
+  * Install and enable systemd units for dns-clean
+  * Fixed a few lintian warnings
+  * Updated Czech translation (Closes: #675575)
+    (thanks to Miroslav Kure)
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 15 Feb 2014 22:04:32 +0100
+
+pppconfig (2.3.20) unstable; urgency=low
+
+  * Orphaned
+
+ -- John G. Hasler <jhasler@debian.org>  Fri, 19 Apr 2013 13:58:08 -0500
+
+pppconfig (2.3.19) unstable; urgency=low
+
+  * Maintainer upload.  Upgraded standards-version.
+
+  * The i18n people don't want this patch.
+    Closes: #651967 Please don't update translations in the clean rule
+
+    Closes: #49914 Fails to prompt user for port when probing fails
+
+  * Unreproducible.
+    Closes: #168115 loses ATDT prefix in chatscript
+
+  * Fixed in 2.3.10
+    Closes: #229130 'LCP: timeout sending Config-Requests' failure
+    caused by username and password being in double quotes in
+    /etc/chatscripts/provider
+
+  * Added Required-Start: $network to dns-clean
+    Closes: #610417 boot sequence: dns-clean after networking
+ -- John G. Hasler <jhasler@debian.org>  Sat, 30 Jun 2012 17:54:50 -0500
+
+pppconfig (2.3.18+nmu4) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n issues. Programs translations:
+    - Russian, thanks to Yuri Kozlov. Closes: #654852
+    - French. Closes: #671203
+    - Japanese, thanks to Kenshi Muto. Closes: #671307
+    - Hebrew, thanks to Omer Zak.
+    - Greek, thanks to Θανάσης Νάτσης.
+    - Vietnamese, thanks to Nguyễn Vũ Hưng.
+    - Danish, thanks to Joe Hansen. Closes: #671775
+    - Indonesian, thanks to Surya Fajri.
+
+ -- David Prévot <taffit@debian.org>  Mon, 14 May 2012 00:08:07 -0400
+
+pppconfig (2.3.18+nmu3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Correct encoding of po/de.po and fix a typo. This Closes: #628464
+  * Fix typos and ungarble --help. This Closes: #577171, #603541
+  * Unfuzzy previously complete translations,
+    i.e. cs, de, he, fr, ja, lt, sk and sv,
+    as far as possible.
+  * Add a missing slash in po/fr.po
+  * Add --previous to msgmerge in "po/update.sh"
+  * Update Swedish translation. Thanks Martin Bagge. Closes: #579298
+  * Update Hebrew translation. Thanks Omer Zak. Closes: #579305
+  * Update Slovak translation. Thanks Ivan Masár. Closes: #587803
+    Added the missing "\n" in one string.
+  * Update Czech translation. Thanks Miroslav Kure. Closes: #601075
+  * Add German man page translation. Closes: #628766
+    Update man/po4a.cfg and debian/rules to actually build and install it
+  * Trival update of French man page translation. Closes: #603884
+  * Fix formatting errors in man page and unfuzzy translations. Closes:
+    #628767
+  * Suggest resolvconf. Closes: #266819
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Wed, 01 Jun 2011 14:31:44 +0200
+
+pppconfig (2.3.18+nmu2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Add quotes to update-menus existence test in postinst and postrm
+    and blame myself
+    Closes: #578658
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 21 Apr 2010 18:54:06 +0200
+
+pppconfig (2.3.18+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Bump debhelper compatibility to 7
+  * Add ${misc:Depends} to package dependencies to properly deal with
+    dependencies triggerred by the use of debhelper utilities
+  * Explicitly use 1.0 source format
+  * Use "invoke-rc.d nscd" instead of hardcoded call to /etc/init.d/nscd
+    in 0dns-down and 0dns-up scritps
+  * Don't call update-menus with a hardcoded path in maintainer scripts
+  * Add $remote_fs to Required-Start in dns-clean init script as it
+    may use binaries in /usr which could be mounted from a remote
+    machine
+  * Point to a versioned GPL document in debian/copyright
+  * Add debhelper tokens to maintainer scripts
+  * No longer add COPYING file to doc files as the debian/copyright file
+    gives a pointer to the GPL v2 document
+  * Fix pending l10n issues. Programs translations:
+    - Russian. Closes: #405405, #490077
+    - French. Closes: #426209
+    - Portuguese. Closes: #446548
+    - Japanese. Closes: #483954, #576529
+    - Swedish. Closes: #577006
+    - German. Closes: #577159
+    - Lithuanian. Closes: #577259
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 12 Apr 2010 08:25:00 +0200
+
+pppconfig (2.3.18) unstable; urgency=high
+
+  * Changed "Replaces:" to Replaces: manpages-fr (<< 2.39.1-5)
+
+  * Corrected typos in man/po/fr.po.
+    Closes: Bug#470323: pppconfig: FTBFS: po4a fails
+
+  * Fixed menu entry.
+
+ -- John Hasler <jhasler@debian.org>  Mon, 10 Mar 2008 18:30:10 -0500
+
+pppconfig (2.3.17) unstable; urgency=low
+
+  * Put French man page back, add Replaces: manpages-fr
+    Sigh.
+
+ -- John Hasler <jhasler@debian.org>  Fri, 11 May 2007 13:29:18 -0500
+
+pppconfig (2.3.16) unstable; urgency=high
+
+  * Removed French man page.
+    Closes: #418350: missing Replaces: manpages-fr (<< 2.39.1-5)
+
+  * Corrected typo in dns-clean.
+
+  * Removed spurious line from debian/dirs.
+
+ -- John Hasler <jhasler@debian.org>  Wed, 25 Apr 2007 12:30:37 -0500
+
+pppconfig (2.3.15) unstable; urgency=low
+
+  * Added 'mkdir /var/run/pppconfig >/dev/null 2>&1 || true' to dns-clean.
+    Closes: #387833: pppconfig: Do not expect the /var/run/ content to persist
+
+  * Fixed LSB header in dns-clean.
+    Closes: #387834: dns-clean: Inaccurate LSB-header in init.d script
+
+ -- John Hasler <jhasler@debian.org>  Sat,  7 Oct 2006 14:57:07 -0500
+
+pppconfig (2.3.14) unstable; urgency=low
+
+  * Fixed logic error in 0dns-up.
+    Closes: #381495: pppconfig: Does not handle /etc/ppp/resolv/$PROVIDER properly
+
+  * New French translation from Gregory Colpart <reg@evolix.fr>
+    Closes: #381548: pppconfig: French templates translation
+
+  * New French translation of man page from Gregory Colpart <reg@evolix.fr>
+    Closes: #381559: pppconfig: French man translation update
+
+  * Appied debian/rules patch from Thomas Huriaux <thomas.huriaux@gmail.com>.
+    French man page is now properly generated and installed.
+
+ -- John Hasler <jhasler@debian.org>  Tue, 15 Aug 2006 15:54:10 -0500
+
+pppconfig (2.3.13) unstable; urgency=low
+
+  * Applied patch from Sven Mueller <debian@incase.de>
+    adding LSB headers to dns-clean.
+    Closes: #332857: Forgot about this bug in last upload?
+
+  * Installed patch from Thomas Hood <jdthood@yahoo.co.uk> to restart nscd.
+    Closes: #281360 pppconfig: ip-up.d/0dns-up, ip-down.d/0dns-down: Should restart nscd
+    Closes: #352304: should depend on nscd for /etc/ppp/ip-up.d/0dns-up's
+    call to /usr/sbin/nscd
+
+  * More translations:
+    Closes: #361422 pppconfig: [INTL:ru] Updated Russian translation
+    Closes: #346464: pppconfig: [INTL:fr] French program translation
+    Closes: #345970: pppconfig: [INTL:sv] Updated Swedish PO translation
+
+  * Fixed 0dns-up to properly test for a pre-existing RESOLVBAK.
+    Closes: #302436: 0dns-up does not really exit if $RESOLVCONF.bak already exists
+
+  * Fixed 0dns-up to properly test for non-symlink resolv.conf on a ro root using code
+    from Thomas Hood <jdthood@yahoo.co.uk>.
+    Closes: #302350: 0dns-up does not really test whether resolv.conf is a symlink
+
+  * Patched debug() with patched from  Jacobo Tarrio Barreiro <jtarrio@debian.org>.
+    Closes: #296405: pppconfig: Translations are forced to have unnecessary weirness
+
+ -- John Hasler <jhasler@debian.org>  Wed, 19 Jul 2006 18:47:48 -0500
+
+pppconfig (2.3.12) unstable; urgency=low
+
+  * Added debian/compat file with '4' in it, patched debian/rules
+    appropriately.
+
+  * Added call to (patched) po/update.sh to debian/rules.
+    Closes: #281854: pppconfig: Translation build system missing a way to update POT and PO files
+
+  * Applied patch to handle manpage translations (and then fixed the patch).
+    Closes: #278062: pppconfig: Switch to po4a to handle manpage translations
+
+  * Patched prerm.
+    Closes: #254799: XSI:isms in debian/prerm
+
+  * Patched postrm.
+    Closes: #295558: avoid error message on purge
+
+  * Fixed typos in man page.
+    Closes: #302742: 'man pppconfig' typos: "seperate" & "proviously"
+
+  * More translations:
+    Closes: #336842: pppconfig: French translation spelling errors
+    Closes: #307880: INTL:vi
+    Closes: #313820: pppconfig: [INTL:de] German PO file corrections
+    Closes: #316966: INTL:vi
+    Closes: #344637: [INTL:el] Greek language update
+    Closes: #287502: pppconfig: [INTL:pl] translation update
+    Closes: #301324: pppconfig: [INTL:lt] initial Lithuanian translation
+    Closes: #306050: pppconfig: [INTL:eu] Basque translation update
+    Closes: #311402: pppconfig: [INTL:it] Translation update
+    Closes: #332674: pppconfig: [INTL:sv] Swedish PO-template translation
+
+ -- John Hasler <jhasler@debian.org>  Sun, 25 Dec 2005 16:23:16 -0600
+
+pppconfig (2.3.11) unstable; urgency=low
+
+  * More translations:
+    CLoses: #296413 pppconfig: [INTL:gl] Galician translation
+    Closes: #294700 pppconfig: [INTL:tl] Tagalog program templates translation
+    Closes: #292173 pppconfig: [INTL:nb] Norwegian Bokmal translation
+    Closes: #288538 pppconfig: [INTL:id] Indonesian translation
+
+ -- John Hasler <jhasler@debian.org>  Wed, 23 Mar 2005 11:55:35 -0600
+
+pppconfig (2.3.10) unstable; urgency=low
+
+  * Changes in mkmenu() and isppassword() to put \q inside quotes
+    due to pppd's handling of quotes.
+    Closes: #285986: pppconfig: Wrong password stored in /etc/chatscripts/provider
+
+  * Removed newlines from strings, all new translations.
+    Closes: #283220: pppconfig: [INTL:ro] Romanian translation
+    Closes: #283213: pppconfig: [INTL:el] Translation update
+    Closes: #282180: pppconfig: [l10n:pt] Translation update
+    Closes: #282115: pppconfig: [INTL:ru] Translation update
+    Closes: #282105: [INTL:tr] Translation update
+    Closes: #282034: pppconfig: [INTL:cs] Translation update
+    Closes: #281963: pppconfig es translation needs to be updated
+    Closes: #281951: pppconfig: [INTL:fi] Translation update
+    Closes: #281949: pppconfig: [INTL:de] Update German translation de.po
+    Closes: #281943: pppconfig: [INTL:fr] Translation update
+    Closes: #281932: [INTL:nl] updated dutch translation
+    Closes: #281914: pppconfig: [INTL:eu] Translation update
+    Closes: #281889: pppconfig: [INTL:da] Translation update
+    Closes: #281886: pppconfig: [INTL:zh_CN] Translation update
+    Closes: #281866: pppconfig: [INTL:ja] Translation update
+    Closes: #281864: pppconfig: [INTL:it] Translation update
+    Closes: #281861: pppconfig: [INTL:sk] Translation update
+    Closes: #281304: [INTL:zh_TW] initial Translation Chinese translation
+    Closes: #280416: pppconfig: [INTL:lt] initial Lithuanian translation
+
+ -- John Hasler <jhasler@debian.org>  Sat, 25 Dec 2004 20:43:55 -0600
+
+pppconfig (2.3.9) unstable; urgency=low
+
+  * Edited main menu.
+    Closes: #280328: Several usability issues during a German install
+
+ -- John Hasler <jhasler@debian.org>  Wed, 17 Nov 2004 20:42:44 -0600
+
+pppconfig (2.3.8) unstable; urgency=low
+
+  * New po/ko.po from Changwoo Ryu.
+    Closes: #263865: [INTL:ko] New korean translation
+
+  * New po/de.po from Dennis Stampfer.
+    CLoses: #262647 [INTL:de] Update German translation de.po
+
+  * New po/fi.po from Tapio Lehtonen.
+    Closes: #260580 [INTL:fi] Updated Finnish translation
+
+ -- John Hasler <jhasler@debian.org>  Mon,  8 Nov 2004 20:06:48 -0600
+
+pppconfig (2.3.7) unstable; urgency=low
+
+  * New po/it.po from  Stefano Canepa.
+    Closes: #274548: [INTL:it] updated italian translation
+
+  * New po/nl.po from Luk Claes.
+    Closes: #274855: [INTL:nl] updated dutch translation of the program translations
+
+  * New po/tr.po from Recai Oktas.
+    Closes: #271229: [INTL:tr] Update for Turkish po translation
+
+  * New po/he.po from Lior Kaplan.
+    Closes: #271161: [INTL:he] updated Hebrew translation for pppconfig
+
+  * New po/nb.po from Bjørn Steensru.
+    Closes: #275770: [l10n:nb] Norwegian Bokmal translation
+
+ -- John Hasler <jhasler@debian.org>  Sun, 10 Oct 2004 20:49:44 -0500
+
+pppconfig (2.3.6) unstable; urgency=low
+
+  * The only changes in this upload are translations.
+
+  * Added po/it.po from  Stefano Canepa.
+  Closes: #262997: pppconfig italian translation is ready
+
+  * Added po/fi.po from Tapio Lehtonen.
+  Closes: #263164: pppconfig: [INTL:fi] Updated finnish translation
+
+  * Added po/ca.po from Jordi Mallach.
+  Closes: #263188: [INTL:ca] New Catalan translation
+
+  * Added new po/sk.po from Peter Mann.
+  Fixes erroneously labeled translation
+
+  * Added new po/es.po from Ruben Porras.
+  Closes: #264811: pppconfig: [INTL:es] spanish translation update
+
+  * Added new po/nl.po from Luk Claes.
+  Closes: #267562: [INTL:nl] new dutch po translation
+
+  * Added new po/ru.po from Yuri Kozlov.
+  Closes: #267830: pppconfig: [l10n] Russian translation
+
+  * Updated po/nn.po from Havard Korsvoll.
+  Closes: #268867: pppconfig: [INTL:nn] Updated translations for norwegian nynorsk
+
+  * Updated po/pt.po from  Miguel Figueiredo.
+  Closes: #268876: Updated PT translation
+
+  * New po/zh_CN.po from Carlos Z.F. Liu.
+  Closes: #269076: pppconfig: [INTL:zh_CN] Simplified Chinese translation
+
+  * Corrected Hebrew translation file name: he, not po.
+  Closes: #269704: File is incorrectly named
+
+  * Applied patch from Roland Stigge.
+  Closes: #268930: pppconfig: Misleading mistake in German translation
+
+ -- John Hasler <jhasler@debian.org>  Tue,  7 Sep 2004 08:12:07 -0500
+
+pppconfig (2.3.5) unstable; urgency=low
+
+  * Defined PPPRESOLV in 0dns-down.
+    Closes: # 262314: 0dns-down does not restore /etc/resolv.conf
+
+  * Corrected po/es.po from Ruben Porras.
+    Closes: #260487: pppconfig: [INTL:es] es.po corrections
+
+  * Corrected po/da.po from Claus Hindsgaul.
+    Closes: #260563: pppconfig: [INTL:da] Updated Danish program translation
+
+  * Corrected po/fr.po from Christian Perrier.
+    Closes: #260589: pppconfig: French translation update
+
+  * Corrected po/cs.po from Miroslav Kure.
+    Closes: #260869: [l10n] Updated Czech translation of pppconfig
+
+  * Corrected po/pl.po from Artur Szymanski.
+    Closes: #261292: [l10n] Updated Polish translation
+
+  * Corrected po/sk.po from Peter Mann.
+    Closes: #261487: [l10n] New Slovak translation of pppconfig
+
+ -- John Hasler <jhasler@debian.org>  Sat, 31 Jul 2004 21:36:59 -0500
+
+pppconfig (2.3.4) unstable; urgency=low
+
+  * Added po/pt.po from  Miguel Figueiredo.
+    Closes: #259605 PT translation for pppconfig
+
+  * Added po/pl.po from Artur Szymanski.
+    Closes: #253276 Polish translation of pppconfig based on Kenshi Mutos patch
+
+  * Patched po/pt_BR.po with patch from  Andre Luis Lopes.
+    Closes:  #260039 Please apply attached patch to update Brazilian Portuguese translation
+
+  * Added po/fr.po from Christian Perrier.
+    Closes: #253474: French translation
+
+ -- John Hasler <jhasler@debian.org>  Mon, 19 Jul 2004 13:01:26 -0500
+
+pppconfig (2.3.3) unstable; urgency=low
+
+  * Applied i18n patch and rules from Kenshi Muto, making pppconfig ready
+    for localization, patching debian/rules, adding po/templates.pot,
+    adding po/ja.po, and fixing two spelling errors.
+    Closes: #246520: pppconfig: pppconfig simple i18n patch, templates.pot, and Japanese translation
+    Closes: #251810: pppconfig: Spelling error
+
+  * Added po/el.po from Konstantinos Margaritis.
+    Closes: #251945: [INTL:el] pppconfig Greek debconf
+
+  * Added po/tr.po from Recai Oktas.
+    Closes: #253976: [INTL:tr] Turkish po translation
+
+  * Added po/eu.po from Piarres Beobide Egaa.
+    Closes: #255542: [l10n:eu] pppconfig basque program translation
+
+  * Added po/po.po from Lior Kaplan.
+    Closes: #257735: pppconfig: Hebrew translation for PPPconfig
+
+  * Added po/es.po from Javier Fernandez-Sanguino Pena.
+    Closes: #258028: pppconfig: [INTL:es] new spanish translation
+
+  * Added po/de.po from Dennis Stampfer.
+    Closes: #252012: pppconfig: [INTL:de] German program translation de.po
+
+  * Added po/da.po from Claus Hindsgaul.
+    Closes: #252111: pppconfig: Danish program translation
+
+  * Added po/fi.po from Tapio Lehtonen.
+    Closes: #252140: pppconfig: [Intl] New translation, Finnish (with Kenshi Muto's patch)
+
+  * Added po/cs.po from Miroslav Kure.
+    Closes: #254413: [l10n] Czech translation of pppconfig
+
+  * Fixed bugs in debian/rules patch, added code to generate LANGUAGES.
+
+  * Added po/pt_BR.po from Andre Luis Lopes.
+    Closes: #258523: [INTL:pt_BR] Please include Brazilian Portuguese translation of pppconfig
+
+ -- John Hasler <jhasler@debian.org>  Tue, 13 Jul 2004 13:38:37 -0500
+
+pppconfig (2.3.2) unstable; urgency=low
+
+  * Fixed setlocale() bug by replacing LC_MESSAGES with
+    $ENV{LC_MESSAGES}.
+
+  * Added ^ and $ to options code.
+
+  * Added '--' to @uilist after @options in dialogbox() to work around
+    whiptail bug.
+    Closes: #248852 Accounts with passwords starting with "-" can't be changed
+
+  * Added code to deleteconnection() and changeConnection() to handle the case
+    that there are no connections.  Now you get a messagebox instead of an
+    immediate exit.  Added "Return to Previous Menu" as first item on Delete menu.
+
+  * Disabled code in finish() intended to prevent accidental deletion of the
+    new connection.
+    Closes: #248856 Connection name with identical username produce .bak-loop when deleted
+
+ -- John Hasler <jhasler@debian.org>  Mon, 17 May 2004 13:23:45 -0500
+
+pppconfig (2.3.1) unstable; urgency=low
+
+  * Installed patch from Thomas Hood to use resolvconf in
+    0dns-up and 0dns-down.
+    Closes: #242092 Patch to add resolvconf support to 0dns-*
+
+ -- John Hasler <jhasler@debian.org>  Wed, 14 APR 2004 21:00:00 -0500
+
+pppconfig (2.3) unstable; urgency=low
+
+  * Revised whiptail/dialog interface so that '--nocancel' and
+    '--defaultno' work properly with dialog.
+
+  * CANCEL now goes back to the previous menu rather than to MAIN.
+    The latter was the documented behavior but users found it confusing.
+    Closes: #144862 Advanced config menu cancel drops entire session not
+    dropping back one level
+
+  * A "@" in delete() had somehow turned into a "$".  Bit-rot?
+    Fixed it.
+    Closes: #199223 `Delete' option does not work
+
+  * Removed superfluous rms from postrm.
+    Closes: #202682: No need for postrm to delete conffiles on purge
+
+  * Changed finish() to not create more than one backup.  Eliminates
+    Swedish chef effect and allows deletion of backups.
+
+  * Changed 0dns-up to strip options from PPP_IPPARAM and to exit if
+    PROVIDER is not to be found in PPPRESOLV.
+    Closes: #191832 /etc/ppp/ip-up.d/0dns-up will not work for
+    `ipparam "earthlink -f"'
+
+ -- John Hasler <jhasler@debian.org>  Sun, 21 Mar 2004 18:00:00 -0600
+
+pppconfig (2.2.0) unstable; urgency=low
+
+  * Rewrote chatescape, replaced all the quote inserting and
+    stripping stuff with calls to it, did some miscellaneous
+    cleanup.
+
+  * Fixed in 2.0.15.  See bug #138344.
+    Closes: #152278 error message when /etc/resolv.conf is missing during
+    first time install
+
+  * Clarified license.
+    Closes: #176900 unclear license in /etc/ppp/ip-up.d/0dns-up
+
+  * Eliminated "echo -e" usage.
+    Closes: #187527 "0dns-up" not POSIX sh compatible - trashes
+    /etc/resolv.conf if a POSIX sh is used as default
+
+  * Fixed 0dns-up to use mktemp to create TEMPRESOLV and to put it
+    in /var/run/pppconfig.
+
+  * Fixed ispname() and isppassword().
+    Closes: #183495 Nokia 6310i w/ Orange GPRS does not need a username
+    or password in chatscripts
+
+  * Added text to getnameservers() to make it clear that resolv.conf
+    will not be touched if "None" is selected.
+    Closes: #187651 Please document how to keep resolv.conf static
+
+  * Rewrote 0dns-up and 0dns-down to not put tempfiles in /etc, to not
+    restore /etc/resolv.conf in 0dns-down if it has been overwritten,
+    to use update-resolv if available, and to work with a r/o root.
+    Closes: #187810 Please support read-only /etc
+    Closes: #187651 Please make resolv.conf futzing optional
+
+  * Added text to man page discussing resolv.conf files.
+    Closes: #63670 Please document how to customize resolv.conf files
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 30 May 2003 10:00:00 -0500
+
+pppconfig (2.1) unstable; urgency=low
+
+  * Remove all trailing newlines from secrets file, add one
+    ahead of new entry, and add a trailing newline.
+  * Closes: #153436 pppconfig: adds non carriage return
+    terminated lines into /etc/ppp/pap-secrets
+  * Rewrote dialogbox() to use pipe/fork/exec instead of backtics.
+    This allowed me to remove all the quoting intended to protect
+    strings against the shell.  This will make quoting and escaping
+    chat and pppd special characters much easier.
+  * Changed some regexps to eq's in secrets_file() /get/ section.
+  * Closes: #170494 "dummy user\" crashes pppconfig
+    Fixed 0dns-up to stop looking for USEPEERDNS as pppd apparently
+    no longer exports it.  Fixes several informally reported bugs.
+  * Added code to handle MS_DNS variables to used by ipppd to pass
+    nameservers to 0dns-up.
+  * Closes: #129871 Use MS DNS does not work if using ipppd
+
+ -- John Hasler <john@dhh.gt.org>  Thu, 12 Dec 2002 19:00:00 -0600
+
+pppconfig (2.0.15) unstable; urgency=low
+
+  * Added a line to escape double quotes in username in "properties"
+    stuff.
+  * Closes: #149869
+  * Added patch from Alexis Huxley to make 0dns-clean test for the
+    existence of 0dns-down.
+  * Closes: #136558
+  * Patched 0dns-up and 0dns-down to check for the existence of
+    resolv.conf.
+  * Closes: #138344
+
+ -- John Hasler <john@dhh.gt.org>  Thu, 13 Jun 2002 21:00:00 -0500
+
+pppconfig (2.0.14) unstable; urgency=high
+
+  * Fixed really, really, really stupid bug in 0dns-up that I
+    introduced in fixing the -e bug.
+  * Closes: #127042
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 4 Jan 2002 8:00:00 -0600
+
+pppconfig (2.0.13) unstable; urgency=low
+
+  * Escaped backticks.
+  * Closes: #127174
+
+ -- John Hasler <john@dhh.gt.org>  Tue, 1 Jan 2002 12:00:00 -0600
+
+pppconfig (2.0.12) unstable; urgency=high
+
+  * Fixed the bug I introduced in too-hastily fixing the -e bug.
+  * Closes: #126937
+
+ -- John Hasler <john@dhh.gt.org>  Sat, 29 Dec 2001 19:00:00 -0600
+
+pppconfig (2.0.11) unstable; urgency=high
+
+  * Fixed test -e bug
+  * Closes: #123971
+  * Corrected description
+  * Closes: #125266
+  * This is not a pppconfig bug
+  * Closes: #123864
+  * IMHO it is not a bug for dns-clean to croak about a missing
+    esential file.
+  * Closes: #110515
+  * Now the loop is gone but the 'Advanced' menu is screwed up
+    in gdialog.  Sigh.
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 28 Dec 2001 15:10:00 -0600
+
+pppconfig (2.0.10) unstable; urgency=high
+
+  * Disabled gdialog because of a bug that causes a loop.
+    A proper fix will follow ASAP.
+  * Closes: #114376
+
+ -- John Hasler <john@dhh.gt.org>  Thu, 4 Oct 2001 10:10:00 -0500
+
+pppconfig (2.0.9) unstable; urgency=low
+
+  * Fixed version number.
+  * Closes: #56249
+  * Changed menu entry to use su-to-root.
+  * Closes: #51317
+  * Make sure /etc/init.d/nscd exists before running it in 0dns-up
+    and 0dns-down.  nscd is now documented: use 'nscd -i hosts'.
+  * Closes: #97665
+  * Closes: #107829
+  * Add ABORT DELAYED to abort string.
+  * Closes: #94431
+  * Fixed typo in 0dns-up.
+  * Closes: #67788
+  * Commented out blank-line eater.  We'll see if this works.
+  * Closes: #62316
+  * Installed 0dns-up patch from Sergio Gelato <Sergio.Gelato@astro.su.se>
+  * Closes: #69513
+  * Added text suggesting quotes in username and password text.
+  * Not a real fix, but it will do for now.
+  * Closes: #69124
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 18 May 2001 17:00:00 -0500
+
+pppconfig (2.0.8) unstable; urgency=low
+
+  * Changed 'gdialog --version' to 'gdialog --version 2>&1' because
+    some versions of gdialog print their version string on stderr.
+  * Replaced 'echo' with '/bin/echo' in scripts to make ash happy.
+  * Made whiptail the lowest priority UI because of a slang bug.
+
+ -- John Hasler <john@dhh.gt.org>  Sun, 13 May 2001 11:00:00 -0500
+
+pppconfig (2.0.7) unstable; urgency=medium
+
+  * Perl doesn't like '_()' as a synonym for 'gettext()' after all.
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 11 May 2001 21:00:00 -0500
+
+pppconfig (2.0.6) unstable; urgency=low
+
+  * Added '/etc/init.d/nscd reload' to 0dns-up and 0dns-down.
+  * Closes: #50481
+  * 57438 was actually fixed in 2.0.5.
+  * Closes: #57438
+  * Closes: #57560
+  * This probably should have been reassigned to ppp, but as it is
+    a year old I'm just going to close it.
+  * Closes: #58562
+  * I was unable to reproduce this either on i386 or powerpc.
+  * Closes: #60777
+  * Renamed /etc/rcS.d/S20dns-clean /etc/rcS.d/S39dns-clean.
+  * Closes: #62206
+  * Added a warning not to put spaces in provider names.  I may
+    eventually add a test for this.
+  * Closes: #65193
+  * The /dev/modem link is deprecated.  I'm not sure what to do to
+    get along with pcmcia, but this isn't it.
+  * Closes: #66071
+  * This one is user error (and I never received the report from the bts).
+  * Closes: #67290
+  * User error again, I think.  Looks like he didn't know that pon defaults
+    to provider.
+  * Closes: #76980
+  * Fixed in 0dns-down.
+  * Closes: #75620
+  * pppconfig now includes EXPERIMENTAL support for kdialog and xdialog.
+  * Changed handling of UI selection.  Now it will try try the selected UI
+    first, then gdialog, then whiptail, then dialog, and only then fail
+    with 'No UI'.  Tests to make sure that the gdialog version is
+    gdialog (gnome-utils 1.4.0) 0.6gnome1-debian.
+  * First entry on main menu now tells the user what connection she is
+    about to change or create if noname is set.
+
+ -- John Hasler <john@dhh.gt.org>  Tue, 1 May 2001 21:00:00 -0500
+
+pppconfig (2.0.5) frozen unstable; urgency=medium
+
+  * Added chmod 644 to 0dns-up and 0dns-down so that users won't be locked
+    out of resolv.conf.  The bug was filed as 'normal' but I think it
+    should have been 'important'.
+  * Closes: #56908
+  * Moved 0dns-clean from S20 to S39.
+  * Closes: #56144
+  * Closes: #56249
+
+ -- John Hasler <john@dhh.gt.org>  Sat, 11 Mar 2000 08:00:00 -0500
+
+pppconfig (2.0.4) unstable frozen; urgency=medium
+
+  * Added missing #!/bin/sh to prerm, fixing a severity important bug.
+  * Closes: #55994
+  * Closes: #55703
+  * Minor improvements to adduser stuff.
+
+ -- John Hasler <john@dhh.gt.org>  Thu, 20 Jan 2000 08:00:00 -0500
+
+pppconfig (2.0.3) unstable; urgency=low
+
+  * Added 'adduser' feature to add users to the dip group.
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 14 Jan 2000 22:00:00 -0600
+
+pppconfig (2.0.2) unstable; urgency=low
+
+  * Fixed bug in modem detection stuff so that it goes to 'manual'
+    when it finds that pppd is running instead of selecting ttyS1.
+  * Fixed bug in finishConnection that resulted in a new connection
+    being deleted if it had the same name as one deleted in the
+    same session.  Closes: #51853
+  * Removed system(clear) from quit().  Closes: #51851
+  * Fixed bug in getname() that sometimes left an extraneous provider name
+    in the provider file.
+  * Changed finishConnection() to rename deleted files instead of unlinking
+    them.
+  * Changed the text in the 'advanced' menu to mention scrolling.
+    Closes: #52291
+  * Revised 0dns-up to put dynamic nameservers last.  Closes: #53222
+  * I cannot reproduce this bug, it is not in pppconfig, and the submitter
+    does not respond.  Closes: #54207
+  * Scripts are now 755. Closes: #54322
+
+ -- John Hasler <john@dhh.gt.org>  Sat, 8 Jan 2000 22:00:00 -0600
+
+pppconfig (2.0.1) unstable; urgency=low
+
+  * Took out dummy address stuff.  Demand does not require it despite
+    what the man page says.
+  * Fixed typo in newoptions.
+  * Added code to writefile() to remove blank lines.
+
+ -- John Hasler <john@dhh.gt.org>  Wed, 10 Nov 1999 22:00:00 -0600
+
+pppconfig (2.0) unstable; urgency=low
+
+  * Added demand dialing support.
+  * Added persist option.
+  * pppconfig accepts a provider name on the command line.  Closes: #43213
+  * Made 'pre-login' appear for CHAP and PAP as well as CHAT.
+  * Re-wrote secrets_file() and ispauth().  Closes: #43680
+  * 43641 appears to be user error.  Closes: #43641
+  * 42716 appears to be user error.  Closes: #42716
+  * Fixed Quit. Closes: #43212
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 5 Nov 1999 22:00:00 -0600
+
+pppconfig (1.9.3beta2.0) unstable; urgency=low
+
+  * Fixed bug that caused dialog to be called with an extra argument.
+  * made use of 'defaultno' conditional on whiptail because
+    dialog doesn't support it.
+  * Fixed radiolists to use on/off.
+  * Got rid of main menu cancel button.
+  * Fixed bug that could hang the program when probing a mouse.
+  * Fixed dependency on POSIX
+  * Closes: #41681, #42544
+
+ -- John Hasler <john@dhh.gt.org>  Wed, 21 July 1999 14:30:00 -0600
+
+pppconfig (1.9.2beta2.0) unstable; urgency=low
+
+  * Fixed minor typo.
+  * Shortened screens by one line to fit 24 line terminals
+  * Rewrote main screen text for above.
+  * Added menu entry.
+  * Fixed typo in dns-clean.
+  * Closes: #40939, #40940, #37235, #41048
+
+ -- John Hasler <john@dhh.gt.org>  Sat, 10 July 1999 22:00:00 -0600
+
+pppconfig (1.9.1beta2.0) unstable; urgency=low
+
+  * Fixed confusing behavior of 'Change' and 'Delete' screens
+    when no providers exist.
+  * Fixed alignment problem in 'Properties' screen with patch
+    from Brad <lists@anomie.dhis.org>.
+  * Made CHAP default to '*' in the second chap-secrets field.
+
+ -- John Hasler <john@dhh.gt.org>  Tue, 6 July 1999 12:05:00 -0600
+
+pppconfig (1.9beta2.0) unstable; urgency=low
+
+  * Complete rewrite in Perl.
+  * Automatic modem detection.
+  * Seperate nameservers for each provider.
+  * Dynamic DNS.
+  * i18.
+  * Many other enhancements.
+
+ -- John Hasler <john@dhh.gt.org>  Mon, 28 Jun 1999 12:05:00 -0600
+
+pppconfig (1.2) unstable; urgency=low
+
+  * Added '--noname' option, added postrm.
+
+ -- John Hasler <john@dhh.gt.org>  Tue, 23 Feb 1999 12:05:00 -0600
+
+pppconfig (1.1) unstable; urgency=low
+
+  * At the request of Enrique Zanardi added code to check resolv.conf
+    for nameservers and offer to add them if they are missing.
+  * Bug 23044 fixed by adding dependecy on debianutils > 1.6.
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 12 June 1998 14:05:00 -0600
+
+pppconfig (1.0) frozen unstable; urgency=low
+
+  * Bug 20501 Fixed grammar and spelling errors.
+  * Bug 20503 Wasn't using mktemp to create temp files.  Fixed that.
+  * Bug 20502 Moved pppconfig from /usr/bin to /usr/sbin.
+  * Fixed bug that sometimes left zero length temp files.
+  * Made some minor changes to explanatory text.
+  * secretsFile munged secrets files that had no nl at the end.  Fixed
+    by inserting a nl at the begining of pppconfig's entry.
+  * Replaced test for root with test for uid 0.
+
+ -- John Hasler <john@dhh.gt.org>  Tue, 7 Apr 1998 20:00:22 -0600
+
+pppconfig (0.9.4) unstable; urgency=low
+
+  * Changed dependency back to whiptail.  newt does not provide it.
+
+ -- John Hasler <john@dhh.gt.org>  Thur, 12 Mar 1998 15:00:22 -0600
+
+pppconfig (0.9.3) unstable; urgency=low
+
+  * Changed whiptail dependency to newt0.21
+
+ -- John Hasler <john@dhh.gt.org>  Wed, 4 Mar 1998 16:48:22 -0600
+
+pppconfig (0.9.2) unstable; urgency=low
+
+  * Added dependency on whiptail
+  * Fixed a typo
+  * Added some tempfile paranoia
+
+ -- John Hasler <john@dhh.gt.org>  Wed, 4 Mar 1998 16:48:22 -0600
+
+pppconfig (0.9.1) unstable; urgency=low
+
+  * Added multiple providers
+  * Fixed a few bugs
+  * Removed dependency on ed
+
+ -- John Hasler <john@dhh.gt.org>  Sat, 28 Feb 1998 15:23:43 -0600
+
+pppconfig (0.9) unstable; urgency=low
+
+  * Initial Release
+
+ -- John Hasler <john@dhh.gt.org>  Tue, 10 Feb 1998 15:23:43 -0600

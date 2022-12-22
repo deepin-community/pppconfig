@@ -1,0 +1,26 @@
+Source: pppconfig
+Section: admin
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Standards-Version: 3.9.2
+Build-Depends-Indep: debianutils (>= 2.10.3)
+Build-Depends: debhelper (>= 10~), po4a
+
+Package: pppconfig
+Architecture: all
+Depends: ${misc:Depends},
+         ppp (>= 2.3.7),
+         whiptail | dialog
+Conflicts: nscd (<< 2.3.2.ds1-14)
+Replaces: manpages-fr (<< 2.39.1-5)
+Suggests: resolvconf
+Description: Text menu based utility for configuring ppp
+ It provides extensive explanations at each step.  pppconfig supports
+ PAP, CHAP, and chat methods of authentication.  It uses the standard
+ ppp configuration files and sets ppp up so that the standard pon and
+ poff commands can be used to control ppp.
+ Some features supported by pppconfig are:
+  - Multiple ISPs with separate nameservers.
+  - Modem detection.
+  - Dynamic DNS.
+  - Dial on demand.

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Postinst for pppconfig by John Hasler 1999-2005
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+
+set -e
+
+if [ -x "`which update-menus`" ] ; then
+    update-menus
+fi
+update-rc.d dns-clean start 39 S . >/dev/null
+
+#DEBHELPER#
+exit 0

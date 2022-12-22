@@ -1,0 +1,1044 @@
+# pppconfig 2.3.3 messages.po
+# Copyright John Hasler john@dhh.gt.org
+# You may treat this document as if it were in the public domain.
+# Originally translated by Rubén Porras Campo
+# Reviewed by Javi Castelo, Javier Fernández-Sanguino and Ricardo Mones Lastra
+msgid ""
+msgstr ""
+"Project-Id-Version: pppconfig 2.3.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-15 23:03+0100\n"
+"PO-Revision-Date: 2004-08-09 00:21+0200\n"
+"Last-Translator: Rubén Porras Campo <nahoo@inicia.es>\n"
+"Language-Team: Debian-l10n-Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Arbitrary upper limits on option and chat files.
+#. If they are bigger than this something is wrong.
+#: pppconfig:69
+msgid "\"GNU/Linux PPP Configuration Utility\""
+msgstr "«Utilidad de configuración de PPP para GNU/Linux»"
+
+#: pppconfig:128
+#, fuzzy
+msgid "No UI\n"
+msgstr "Sin IU"
+
+#: pppconfig:131
+msgid "You must be root to run this program.\n"
+msgstr "Debe ser superusuario para ejecutar este programa\n"
+
+#: pppconfig:132 pppconfig:133
+#, perl-format
+msgid "%s does not exist.\n"
+msgstr "%s no existe.\n"
+
+#. Parent
+#: pppconfig:161
+msgid "Can't close WTR in parent: "
+msgstr "No se puede cerrar WTR en el padre: "
+
+#: pppconfig:167
+msgid "Can't close RDR in parent: "
+msgstr "No se puede cerrar RDR en el padre: "
+
+#. Child or failed fork()
+#: pppconfig:171
+msgid "cannot fork: "
+msgstr "no se puede crear un proceso hijo: "
+
+#: pppconfig:172
+msgid "Can't close RDR in child: "
+msgstr "No se puede cerrar RDR en el hijo: "
+
+#: pppconfig:173
+msgid "Can't redirect stderr: "
+msgstr "No se puede redirigir la salida de error estándar: "
+
+#: pppconfig:174
+msgid "Exec failed: "
+msgstr "Se produjo un fallo al llamar a «exec»: "
+
+#: pppconfig:178
+msgid "Internal error: "
+msgstr "Error interno: "
+
+#: pppconfig:255
+msgid "Create a connection"
+msgstr "Crear una conexión"
+
+#: pppconfig:259
+#, perl-format
+msgid "Change the connection named %s"
+msgstr "Cambiar la conexión denominada %s"
+
+#: pppconfig:262
+#, perl-format
+msgid "Create a connection named %s"
+msgstr "Crear una conexión denominada %s"
+
+#. This section sets up the main menu.
+#: pppconfig:270
+#, fuzzy
+msgid ""
+"This is the PPP configuration utility.  It does not connect to your isp: "
+"just configures ppp so that you can do so with a utility such as pon.  It "
+"will ask for the username, password, and phone number that your ISP gave "
+"you.  If your ISP uses PAP or CHAP, that is all you need.  If you must use a "
+"chat script, you will need to know how your ISP prompts for your username "
+"and password.  If you do not know what your ISP uses, try PAP.  Use the up "
+"and down arrow keys to move around the menus.  Hit ENTER to select an item.  "
+"Use the TAB key to move from the menu to <OK> to <CANCEL> and back.  To move "
+"on to the next menu go to <OK> and hit ENTER. To go back to the previous "
+"menu go to <CANCEL> and hit enter."
+msgstr ""
+"Ésta es la utilidad de configuración de PPP. No se conecta a su ISP: sólo "
+"configura PPP para que pueda hacer la conexión mediante una utilidad como "
+"pon. Le preguntará el nombre de usuario, la contraseña, y el número de "
+"teléfono que le habrá dado su ISP. Si su ISP usa PAP o CHAP, eso es todo lo "
+"que necesita. Si debe usar un script «chat», necesitará saber como pregunta "
+"su ISP por el nombre de usuario y la contraseña. Si no sabe lo que usa su "
+"ISP, pruebe PAP. Use las teclas arriba y abajo para moverse por los menús. "
+"Presione «ENTER» para seleccionar una opción.\n"
+"Use «TAB» para moverse desde el menú a <ACEPTAR> y <CANCELAR> y volver. "
+"Cuando esté listo para ir al siguiente menú vaya a <ACEPTAR> y pulse "
+"«ENTER». Para volver hacia el menú principal vaya a <CANCELAR> y pulse "
+"«ENTER»."
+
+#: pppconfig:271
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: pppconfig:273
+msgid "Change a connection"
+msgstr "Cambiar una conexión"
+
+#: pppconfig:274
+msgid "Delete a connection"
+msgstr "Eliminar una conexión"
+
+#: pppconfig:275
+msgid "Finish and save files"
+msgstr "Terminar y guardar los ficheros"
+
+#: pppconfig:283
+#, fuzzy, perl-format
+msgid ""
+"Please select the authentication method for this connection.  PAP is the "
+"method most often used in Windows 95, so if your ISP supports the NT or "
+"Win95 dial up client, try PAP.  The method is now set to %s."
+msgstr ""
+"\n"
+"Por favor, seleccione el método de autenticación para esta conexión. PAP es "
+"el método más usado en Windows 95, así que si su ISP soporta clientes NT o "
+"Win95 para conexiones telefónicas, pruebe PAP. El método ahora está "
+"establecido a %s."
+
+#: pppconfig:284
+#, perl-format
+msgid " Authentication Method for %s"
+msgstr " Método de autenticación para %s"
+
+#: pppconfig:285
+msgid "Peer Authentication Protocol"
+msgstr "Protocolo de autenticación entre iguales"
+
+#: pppconfig:286
+msgid "Use \"chat\" for login:/password: authentication"
+msgstr "Usa «chat» para la autenticación usuario:/contraseña:"
+
+#: pppconfig:287
+msgid "Crypto Handshake Auth Protocol"
+msgstr "Protocolo de autenticación mediante intercambio de claves cifradas"
+
+#: pppconfig:309
+#, fuzzy
+msgid ""
+"Please select the property you wish to modify, select \"Cancel\" to go back "
+"to start over, or select \"Finished\" to write out the changed files."
+msgstr ""
+"\n"
+"Por favor, seleccione la propiedad que quiera modificar, seleccione "
+"«Cancelar» para volver a empezar, o «Finished» para escribir los ficheros "
+"modificados."
+
+#: pppconfig:310
+#, perl-format
+msgid "\"Properties of %s\""
+msgstr "«Propiedades de %s»"
+
+#: pppconfig:311
+#, perl-format
+msgid "%s Telephone number"
+msgstr "%s Número de teléfono"
+
+#: pppconfig:312
+#, perl-format
+msgid "%s Login prompt"
+msgstr "%s Texto de petición de acceso"
+
+#: pppconfig:314
+#, perl-format
+msgid "%s ISP user name"
+msgstr "%s Nombre de usuario del ISP"
+
+#: pppconfig:315
+#, perl-format
+msgid "%s Password prompt"
+msgstr "%s Texto de petición de contraseña"
+
+#: pppconfig:317
+#, perl-format
+msgid "%s ISP password"
+msgstr "%s Contraseña del ISP"
+
+#: pppconfig:318
+#, perl-format
+msgid "%s Port speed"
+msgstr "%s Velocidad del puerto"
+
+#: pppconfig:319
+#, perl-format
+msgid "%s Modem com port"
+msgstr "%s Puerto de comunicaciones del módem"
+
+#: pppconfig:320
+#, perl-format
+msgid "%s Authentication method"
+msgstr "%s Método de autenticación"
+
+#: pppconfig:322
+msgid "Advanced Options"
+msgstr "Opciones avanzadas"
+
+#: pppconfig:324
+msgid "Write files and return to main menu."
+msgstr "Guarda los ficheros y vuelve al menú principal"
+
+#. @menuvar = (gettext("#. This menu allows you to change some of the more obscure settings.  Select #. the setting you wish to change, and select \"Previous\" when you are done. #. Use the arrow keys to scroll the list."),
+#: pppconfig:360
+#, fuzzy
+msgid ""
+"This menu allows you to change some of the more obscure settings.  Select "
+"the setting you wish to change, and select \"Previous\" when you are done. "
+"Use the arrow keys to scroll the list."
+msgstr ""
+"Este menú le permite cambiar algunas de las preferencias más ocultas. "
+"Seleccione la preferencia que quiera cambiar y seleccione «Previous» cuando "
+"esté satisfecho. Use las teclas de flecha para moverse por la lista."
+
+#: pppconfig:361
+#, perl-format
+msgid "\"Advanced Settings for %s\""
+msgstr "«Preferencias avanzadas para %s»"
+
+#: pppconfig:362
+#, perl-format
+msgid "%s Modem init string"
+msgstr "%s Cadena de inicialización del módem"
+
+#: pppconfig:363
+#, perl-format
+msgid "%s Connect response"
+msgstr "%s Respuesta de conexión"
+
+#: pppconfig:364
+#, perl-format
+msgid "%s Pre-login chat"
+msgstr "%s Órdenes previas a la conexión"
+
+#: pppconfig:365
+#, perl-format
+msgid "%s Default route state"
+msgstr "%s Estado de la ruta predeterminada"
+
+#: pppconfig:366
+#, perl-format
+msgid "%s Set ip addresses"
+msgstr "%s Establece la dirección IP"
+
+#: pppconfig:367
+#, perl-format
+msgid "%s Turn debugging on or off"
+msgstr "%s Activar o desactivar la depuración"
+
+#: pppconfig:368
+#, perl-format
+msgid "%s Turn demand dialing on or off"
+msgstr "%s Activar o desactivar la marcación bajo demanda"
+
+#: pppconfig:369
+#, perl-format
+msgid "%s Turn persist on or off"
+msgstr "%s Activar o desactivar el modo persistente"
+
+#: pppconfig:371
+#, perl-format
+msgid "%s Change DNS"
+msgstr "%s Cambiar el DNS"
+
+#: pppconfig:372
+msgid "                     Add a ppp user"
+msgstr "                     Añadir un usuario PPP"
+
+#: pppconfig:374
+#, perl-format
+msgid "%s Post-login chat "
+msgstr "%s Órdenes post-conexión"
+
+#: pppconfig:376
+#, perl-format
+msgid "%s Change remotename "
+msgstr "%s Cambiar el nombre remoto "
+
+#: pppconfig:378
+#, perl-format
+msgid "%s Idle timeout "
+msgstr "%s Tiempo de espera por inactividad "
+
+#. End of SWITCH
+#: pppconfig:389
+msgid "Return to previous menu"
+msgstr "Volver al menú anterior"
+
+#: pppconfig:391
+msgid "Exit this utility"
+msgstr "Salir de esta utilidad"
+
+#: pppconfig:539
+#, perl-format
+msgid "Internal error: no such thing as %s, "
+msgstr "Error interno: no existe %s, "
+
+#. End of while(1)
+#. End of do_action
+#. the connection string sent by the modem
+#: pppconfig:546
+#, fuzzy
+msgid ""
+"Enter the text of connect acknowledgement, if any.  This string will be sent "
+"when the CONNECT string is received from the modem.  Unless you know for "
+"sure that your ISP requires such an acknowledgement you should leave this as "
+"a null string: that is, ''.\n"
+msgstr ""
+"\n"
+"Introduzca el texto para responder a la conexión, si es que hay alguno. Esta "
+"cadena se enviará cuando se reciba CONNECT desde el módem. A no ser que esté "
+"seguro que su ISP necesita esta respuesta debería dejar esto como la cadena "
+"nula: esto es, ''.\n"
+
+#: pppconfig:547
+msgid "Ack String"
+msgstr "Texto de contestación"
+
+#. the login prompt string sent by the ISP
+#: pppconfig:555
+#, fuzzy
+msgid ""
+"Enter the text of the login prompt.  Chat will send your username in "
+"response.  The most common prompts are login: and username:.  Sometimes the "
+"first letter is capitalized and so we leave it off and match the rest of the "
+"word.  Sometimes the colon is omitted.  If you aren't sure, try ogin:."
+msgstr ""
+"\n"
+"Introduzca el texto de petición de acceso. «Chat» enviará su nombre de "
+"usuario como respuesta. Los textos más comunes son «login:» y «username:». A "
+"veces la primera letra está en mayúsculas y por eso se descarta y sólo se "
+"comprueba el resto de la palabra. A veces los dos puntos se omiten. Si no "
+"está seguro, pruebe con «ogin:».\n"
+
+#: pppconfig:556
+msgid "Login Prompt"
+msgstr "Texto de petición de acceso"
+
+#. password prompt sent by the ISP
+#: pppconfig:564
+#, fuzzy
+msgid ""
+"Enter the text of the password prompt.  Chat will send your password in "
+"response. The most common prompt is password:.  Sometimes the first letter "
+"is capitalized and so we leave it off and match the last part of the word."
+msgstr ""
+"\n"
+"Introduzca el texto de la petición de contraseña. «Chat» enviará su "
+"contraseña como respuesta. El texto más común es «password:». A veces la "
+"primera letra está en mayúsculas y por eso se descarta y sólo se comprueba "
+"el resto de la palabra.\n"
+
+#: pppconfig:564
+msgid "Password Prompt"
+msgstr "Texto de petición de contraseña"
+
+#. optional pre-login chat
+#: pppconfig:572
+#, fuzzy
+msgid ""
+"You probably do not need to put anything here.  Enter any additional input "
+"your isp requires before you log in.  If you need to make an entry, make the "
+"first entry the prompt you expect and the second the required response.  "
+"Example: your isp sends 'Server:' and expect you to respond with "
+"'trilobite'.  You would put 'erver trilobite' (without the quotes) here.  "
+"All entries must be separated by white space.  You can have more than one "
+"expect-send pair."
+msgstr ""
+"\n"
+"Probablemente no necesita poner nada aquí. Introduzca cualquier entrada "
+"adicional que necesite su ISP antes de que acceda. Si necesita generar una "
+"entrada, ponga en la primera entrada el texto que espere, y en la segunda la "
+"respuesta necesaria.  \n"
+"Ejemplo: su ISP envía «Server:» y espera que responda con «trilobite». "
+"Debería poner aquí «erver trilobite» (sin las comillas). Todas las entradas "
+"deben separarse con espacios en blanco. Puede tener más de un par de valores "
+"esperar-enviar.\n"
+" "
+
+#: pppconfig:572
+msgid "Pre-Login"
+msgstr "Pre-conexión"
+
+#. post-login chat
+#: pppconfig:580
+#, fuzzy
+msgid ""
+"You probably do not need to change this.  It is initially '' \\d\\c which "
+"tells chat to expect nothing, wait one second, and send nothing.  This gives "
+"your isp time to get ppp started.  If your isp requires any additional input "
+"after you have logged in you should put it here.  This may be a program name "
+"like ppp as a response to a menu prompt.  If you need to make an entry, make "
+"the first entry the prompt you expect and the second the required response.  "
+"Example: your isp sends 'Protocol' and expect you to respond with 'ppp'.  "
+"You would put 'otocol ppp' (without the quotes) here.  Fields must be "
+"separated by white space.  You can have more than one expect-send pair."
+msgstr ""
+"\n"
+"Probablemente no necesita cambiar esto. Inicialmente es '' \\d\\c que indica "
+"a chat que no espere recibir nada, espere un segundo, y no envíe nada. Esto "
+"le da tiempo a su ISP a ejecutar ppp. Si su ISP requiere alguna entrada "
+"adicional después de que halla entrado, debería ponerla aquí. Esto puede ser "
+"el nombre de un programa como ppp en respuesta a un texto de petición. Si "
+"necesita generar una entrada, ponga en la primera entrada el texto que "
+"espere, y en la segunda la respuesta necesaria. Por ejemplo: su ISP envía "
+"«Protocol:» y espera que responda con «ppp». Debe poner aquí «otocol "
+"ppp» (sin las comillas). Todas las entradas deben separarse con espacios en "
+"blanco. Puede tener más de un par esperar-enviar.\n"
+" "
+
+#: pppconfig:580
+msgid "Post-Login"
+msgstr "Post-conexión"
+
+#: pppconfig:603
+#, fuzzy
+msgid "Enter the username given to you by your ISP."
+msgstr ""
+"\n"
+"Introduzca el nombre de usuario que le ha dado su ISP."
+
+#: pppconfig:604
+msgid "User Name"
+msgstr "Nombre de usuario"
+
+#: pppconfig:621
+#, fuzzy
+msgid ""
+"Answer 'yes' to have the port your modem is on identified automatically.  It "
+"will take several seconds to test each serial port.  Answer 'no' if you "
+"would rather enter the serial port yourself"
+msgstr ""
+"\n"
+"Responda 'sí' para tratar de identificar automáticamente en que puerto está "
+"colocado el módem. Llevará varios segundos probar cada puerto serie. "
+"Responda 'no' si prefiere introducir el puerto usted mismo"
+
+#: pppconfig:622
+msgid "Choose Modem Config Method"
+msgstr "Elegir el método de configuración para el módem"
+
+#: pppconfig:625
+#, fuzzy
+msgid "Can't probe while pppd is running."
+msgstr ""
+"\n"
+"No se puede sondear mientras pppd está funcionando."
+
+#: pppconfig:632
+#, perl-format
+msgid "Probing %s"
+msgstr "Sondeando %s"
+
+#: pppconfig:639
+#, fuzzy
+msgid ""
+"Below is a list of all the serial ports that appear to have hardware that "
+"can be used for ppp.  One that seems to have a modem on it has been "
+"preselected.  If no modem was found 'Manual' was preselected.  To accept the "
+"preselection just hit TAB and then ENTER.  Use the up and down arrow keys to "
+"move among the selections, and press the spacebar to select one.  When you "
+"are finished, use TAB to select <OK> and ENTER to move on to the next item. "
+msgstr ""
+"\n"
+"A continuación se muestra una lista con todos los puertos serie que parecen "
+"tener harware que puede usar PPP. Uno de los que parece tener un módem ha "
+"sido preseleccionado. Si no se encontró ningún módem se ha preseleccionado "
+"«Manual». Para aceptar la preselección sólo pulse «TAB» y luego «ENTER». Use "
+"las teclas arriba y abajo para moverse por las distintas selecciones, y "
+"presione la barra espaciadora para seleccionar una. Cuando termine, use "
+"«TAB» para seleccionar <ACEPTAR> y «ENTER» para ir a la siguiente opción. "
+
+#: pppconfig:639
+msgid "Select Modem Port"
+msgstr "Seleccione el puerto del módem"
+
+#: pppconfig:641
+msgid "Enter the port by hand. "
+msgstr "Introduzca el puerto a mano. "
+
+#: pppconfig:649
+#, fuzzy
+msgid ""
+"Enter the port your modem is on. \n"
+"/dev/ttyS0 is COM1 in DOS. \n"
+"/dev/ttyS1 is COM2 in DOS. \n"
+"/dev/ttyS2 is COM3 in DOS. \n"
+"/dev/ttyS3 is COM4 in DOS. \n"
+"/dev/ttyS1 is the most common.  Note that this must be typed exactly as "
+"shown.  Capitalization is important: ttyS1 is not the same as ttys1."
+msgstr ""
+"\n"
+"Introduzca el puerto en el que está el módem. \n"
+"/dev/ttyS0 es el puerto COM1 en DOS. \n"
+"/dev/ttyS1 es el puerto COM2 en DOS. \n"
+"/dev/ttyS2 es el puerto COM3 en DOS. \n"
+"/dev/ttyS3 es el puerto  COM4 en DOS. \n"
+"El más común es /dev/ttyS1. Tenga en cuenta que debe de teclearse tal cual "
+"como se muestra. Las mayúsculas son importantes: ttyS1 no es lo mismo que "
+"ttys1."
+
+#: pppconfig:655
+msgid "Manually Select Modem Port"
+msgstr "Seleccionar manualmente el puerto del módem"
+
+#: pppconfig:670
+#, fuzzy
+msgid ""
+"Enabling default routing tells your system that the way to reach hosts to "
+"which it is not directly connected is via your ISP.  This is almost "
+"certainly what you want.  Use the up and down arrow keys to move among the "
+"selections, and press  the spacebar to select one.  When you are finished, "
+"use TAB to select <OK> and ENTER to move on to the next item."
+msgstr ""
+"\n"
+"Habilitar enrutado predeterminado le dice a su sistema el modo de llegar a "
+"máquinas que no estén conectadas directamente a través de su ISP. "
+"Seguramente esto es lo que quiere. Use las teclas arriba y abajo para "
+"moverse entre las selecciones, y presione la barra espaciadora para "
+"seleccionar una. Cuando termine, use «TAB» para seleccionar <ACEPTAR> y "
+"«ENTER» para moverse a la siguiente opción."
+
+#: pppconfig:671
+msgid "Default Route"
+msgstr "Ruta predeterminada"
+
+#: pppconfig:672
+msgid "Enable default route"
+msgstr "Habilitar una ruta predeterminada"
+
+#: pppconfig:673
+msgid "Disable default route"
+msgstr "Deshabilitar una ruta predeterminada"
+
+#: pppconfig:680
+#, fuzzy
+msgid ""
+"You almost certainly do not want to change this from the default value of "
+"noipdefault. This is not the place for your nameserver ip numbers.  It is "
+"the place for your ip number if and only if your ISP has assigned you a "
+"static one.  If you have been given only a local static ip, enter it with a "
+"colon at the end, like this: 192.168.1.2:  If you have been given both a "
+"local and a remote ip, enter the local ip, a colon, and the remote ip, like "
+"this: 192.168.1.2:10.203.1.2"
+msgstr ""
+"\n"
+"Lo más seguro es que no quiera cambiar el valor «noipdefault» "
+"predeterminado. Aquí no se configuran las direcciones IP de sus servidores "
+"de dominio. Aquí se introduce su dirección IP sólo si su ISP le ha asignado "
+"una estática. Si sólo se le ha proporcionado una IP estática local, "
+"introdúzcala con dos puntos al final, como por ejemplo: «192.168.1.2:» Si se "
+"le ha proporcionado una IP local y otra remota, introduzca la IP local, "
+"luego dos puntos, y luego la IP remota, así: «192.168.1.2:10.203.1.2» "
+
+#: pppconfig:681
+msgid "IP Numbers"
+msgstr "Números IP"
+
+#. get the port speed
+#: pppconfig:688
+#, fuzzy
+msgid ""
+"Enter your modem port speed (e.g. 9600, 19200, 38400, 57600, 115200).  I "
+"suggest that you leave it at 115200."
+msgstr ""
+"\n"
+"Introduzca la velocidad del puerto del módem (p. ej. 9600, 19200, 38400, "
+"57600, 115200). Le sugiero que lo deje en 115200."
+
+#: pppconfig:689
+msgid "Speed"
+msgstr "Velocidad"
+
+#: pppconfig:697
+#, fuzzy
+msgid ""
+"Enter modem initialization string.  The default value is ATZ, which tells "
+"the modem to use it's default settings.  As most modems are shipped from the "
+"factory with default settings that are appropriate for ppp, I suggest you "
+"not change this."
+msgstr ""
+"\n"
+"Introduzca la cadena de inicialización del módem. El valor predeterminado es "
+"ATZ, que le dice al módem que use la configuración predeterminada. Dado que "
+"la mayoría de los módems traen de fábrica una configuración apropiada para "
+"PPP, le sugiero que no lo cambie."
+
+#: pppconfig:698
+msgid "Modem Initialization"
+msgstr "Inicialización del módem"
+
+#: pppconfig:711
+#, fuzzy
+msgid ""
+"Select method of dialing.  Since almost everyone has touch-tone, you should "
+"leave the dialing method set to tone unless you are sure you need pulse.  "
+"Use the up and down arrow keys to move among the selections, and press the "
+"spacebar to select one.  When you are finished, use TAB to select <OK> and "
+"ENTER to move on to the next item."
+msgstr ""
+"\n"
+"Seleccione el método de marcado. Dado que casi todo el mundo usa marcación "
+"por tonos, debería dejar el método de marcación por tonos a menos que "
+"necesite utilizar marcación por pulsos. Use las teclas arriba y abajo para "
+"moverse entre las selecciones, y presione la barra espaciadora para "
+"seleccionar una. Cuando termine, use «TAB» para seleccionar <ACEPTAR> y "
+"«ENTER» para moverse a la siguiente opción."
+
+#: pppconfig:712
+msgid "Pulse or Tone"
+msgstr "Pulsos o tonos"
+
+#. Now get the number.
+#: pppconfig:719
+#, fuzzy
+msgid ""
+"Enter the number to dial.  Don't include any dashes.  See your modem manual "
+"if you need to do anything unusual like dialing through a PBX."
+msgstr ""
+"\n"
+"Introduzca el número a marcar. No incluya ningún guión. Consulte el manual "
+"de su módem si necesita hacer algo inusual como marcar a través de un PBX."
+
+#: pppconfig:720
+msgid "Phone Number"
+msgstr "Número de teléfono"
+
+#: pppconfig:732
+#, fuzzy
+msgid "Enter the password your ISP gave you."
+msgstr ""
+"\n"
+"Introduzca la contraseña que le dio su ISP."
+
+#: pppconfig:733
+msgid "Password"
+msgstr "Contraseña"
+
+#: pppconfig:797
+#, fuzzy
+msgid ""
+"Enter the name you wish to use to refer to this isp.  You will probably want "
+"to give the default name of 'provider' to your primary isp.  That way, you "
+"can dial it by just giving the command 'pon'.  Give each additional isp a "
+"unique name.  For example, you might call your employer 'theoffice' and your "
+"university 'theschool'.  Then you can connect to your isp with 'pon', your "
+"office with 'pon theoffice', and your university with 'pon theschool'.  "
+"Note: the name must contain no spaces."
+msgstr ""
+"\n"
+"Introduzca el nombre que quiere usar para referirse a este ISP. "
+"Probablemente quiera dejar el nombre predeterminado «provider» para su ISP "
+"primario. De ese modo, puede marcar simplemente usando la orden «pon». "
+"Nombre de forma única a cada ISP adicional. Por ejemplo, podría llamar "
+"«laoficina» a su empresa y «launiversidad» a su universidad. Luego podrá "
+"conectarse con su ISP usando «pon», con la empresa usando «pon laoficina», y "
+"con la universidad usando «pon launiversidad». Nota: Los nombres no pueden "
+"contener espacios."
+
+#: pppconfig:798
+msgid "Provider Name"
+msgstr "Nombre del proveedor"
+
+#: pppconfig:802
+msgid "This connection exists.  Do you want to overwrite it?"
+msgstr "Esta conexión ya existe. ¿Desea sobreescribirla?"
+
+#: pppconfig:803
+msgid "Connection Exists"
+msgstr "La conexión ya existe"
+
+#: pppconfig:816
+#, fuzzy, perl-format
+msgid ""
+"Finished configuring connection and writing changed files.  The chat strings "
+"for connecting to the ISP are in /etc/chatscripts/%s, while the options for "
+"pppd are in /etc/ppp/peers/%s.  You may edit these files by hand if you "
+"wish.  You will now have an opportunity to exit the program, configure "
+"another connection, or revise this or another one."
+msgstr ""
+"\n"
+"Se ha terminado de configurar su conexión y se están guardando los ficheros "
+"modificados. Las cadenas «chat» necesarias para conectarse al ISP están en /"
+"etc/chatscripts/%s, mientras que las opciones para «pppd» están en /etc/ppp/"
+"peers/%s. Puede editar los ficheros a mano si quiere. Ahora tendrá la "
+"oportunidad de salir del programa, configurar otra conexión, o revisar ésta "
+"o cualquier otra."
+
+#: pppconfig:817
+msgid "Finished"
+msgstr "Terminado"
+
+#. this sets up new connections by calling other functions to:
+#. - initialize a clean state by zeroing state variables
+#. - query the user for information about a connection
+#: pppconfig:853
+msgid "Create Connection"
+msgstr "Crear una conexión"
+
+#: pppconfig:886
+msgid "No connections to change."
+msgstr "No hay conexiones para cambiar."
+
+#: pppconfig:886 pppconfig:890
+msgid "Select a Connection"
+msgstr "Seleccionar una conexión"
+
+#: pppconfig:890
+msgid "Select connection to change."
+msgstr "Seleccionar una conexión a cambiar."
+
+#: pppconfig:913
+msgid "No connections to delete."
+msgstr "No hay ninguna conexión para eliminar."
+
+#: pppconfig:913 pppconfig:917
+msgid "Delete a Connection"
+msgstr "Eliminar una conexión"
+
+#: pppconfig:917
+#, fuzzy
+msgid "Select connection to delete."
+msgstr ""
+"\n"
+"Seleccionar una conexión para eliminar."
+
+#: pppconfig:917 pppconfig:919
+msgid "Return to Previous Menu"
+msgstr "Volver al menú anterior"
+
+#: pppconfig:926
+#, fuzzy
+msgid "Do you wish to quit without saving your changes?"
+msgstr ""
+"\n"
+"¿Quiere salir sin guardar los cambios?"
+
+#: pppconfig:926
+msgid "Quit"
+msgstr "Salir"
+
+#: pppconfig:938
+msgid "Debugging is presently enabled."
+msgstr ""
+
+#: pppconfig:938
+msgid "Debugging is presently disabled."
+msgstr ""
+
+#: pppconfig:939
+#, fuzzy, perl-format
+msgid "Selecting YES will enable debugging.  Selecting NO will disable it. %s"
+msgstr ""
+"\n"
+"Si elige «SÍ» habilitará la depuración. Si selecciona «NO» la deshabilitará. "
+"La depuración está actualmente %s."
+
+#: pppconfig:939
+msgid "Debug Command"
+msgstr "Orden de depuración"
+
+#: pppconfig:954
+#, fuzzy, perl-format
+msgid ""
+"Selecting YES will enable demand dialing for this provider.  Selecting NO "
+"will disable it.  Note that you will still need to start pppd with pon: "
+"pppconfig will not do that for you.  When you do so, pppd will go into the "
+"background and wait for you to attempt to access something on the Net, and "
+"then dial up the ISP.  If you do enable demand dialing you will also want to "
+"set an idle-timeout so that the link will go down when it is idle.  Demand "
+"dialing is presently %s."
+msgstr ""
+"\n"
+"Si selecciona «SÍ» habilitará la marcación bajo demanda para este proveedor. "
+"Si selecciona «NO» la deshabilitará. Tenga en cuenta que aún necesita "
+"ejecutar pppd con «pon»: pppconfig no hará eso por usted. Cuando lo haga, "
+"pppd esperará en segundo plano un intento de acceso a la Red, y entonces "
+"llamará a su ISP. Si habilita la marcación bajo demanda también tendrá que "
+"establecer un tiempo máximo de inactividad de forma que se cierre el enlace "
+"cuando no se use.\n"
+"La marcación bajo demanda está actualmente %s."
+
+#: pppconfig:954
+msgid "Demand Command"
+msgstr "Marcación bajo demanda"
+
+#: pppconfig:968
+#, fuzzy, perl-format
+msgid ""
+"Selecting YES will enable persist mode.  Selecting NO will disable it.  This "
+"will cause pppd to keep trying until it connects and to try to reconnect if "
+"the connection goes down.  Persist is incompatible with demand dialing: "
+"enabling demand will disable persist.  Persist is presently %s."
+msgstr ""
+"\n"
+"Si selecciona «SÍ» habilitará el modo persistente. Si selecciona «NO» lo "
+"deshabilitará. Esto hará que pppd intente conectarse varias veces hasta que "
+"lo consiga, y que en caso de que se pierda la conexión intente volver a "
+"conectarse. El modo persistente es incompatible con la marcación bajo "
+"demanda: habilitar la marcación bajo demanda lo deshabilitará. \n"
+"El modo persistente está actualmente %s."
+
+#: pppconfig:968
+msgid "Persist Command"
+msgstr "Modo persistente"
+
+#: pppconfig:992
+#, fuzzy
+msgid ""
+"Choose a method.  'Static' means that the same nameservers will be used "
+"every time this provider is used.  You will be asked for the nameserver "
+"numbers in the next screen.  'Dynamic' means that pppd will automatically "
+"get the nameserver numbers each time you connect to this provider.  'None' "
+"means that DNS will be handled by other means, such as BIND (named) or "
+"manual editing of /etc/resolv.conf.  Select 'None' if you do not want /etc/"
+"resolv.conf to be changed when you connect to this provider.  Use the up and "
+"down arrow keys to move among the selections, and press the spacebar to "
+"select one.  When you are finished, use TAB to select <OK> and ENTER to move "
+"on to the next item."
+msgstr ""
+"\n"
+"Elija un método. «Static» significa que siempre se usarán los mismos "
+"servidores de dominio con este proveedor. En la próxima pantalla se le "
+"preguntarán las direcciones de los servidores de dominio. «Dynamic» "
+"significa que pppd obtendrá automáticamente las direcciones cada vez que se "
+"conecte con este proveedor. «None» significa que los DNS se gestionarán con "
+"otros métodos, como BIND (named) o editando manualmente el fichero «/etc/"
+"resolv.conf». Use las teclas arriba o abajo para moverse entre las opciones, "
+"y presione la barra espaciadora para seleccionar una. Cuando halla "
+"terminado, use «TAB» para seleccionar <ACEPTAR> y «ENTER» para moverse a la "
+"siguiente opción."
+
+#: pppconfig:993
+msgid "Configure Nameservers (DNS)"
+msgstr "Configurar los servidores de dominio (DNS)"
+
+#: pppconfig:994
+msgid "Use static DNS"
+msgstr "Usar DNS estáticos"
+
+#: pppconfig:995
+msgid "Use dynamic DNS"
+msgstr "Usar DNS dinámicos"
+
+#: pppconfig:996
+msgid "DNS will be handled by other means"
+msgstr "Los DNS se manejarán con otros métodos"
+
+#: pppconfig:1001
+#, fuzzy
+msgid ""
+"\n"
+"Enter the IP number for your primary nameserver."
+msgstr ""
+"\n"
+"Introduzca la dirección IP para su servidor de dominio primario."
+
+#: pppconfig:1002 pppconfig:1012
+msgid "IP number"
+msgstr "Dirección IP"
+
+#: pppconfig:1012
+#, fuzzy
+msgid "Enter the IP number for your secondary nameserver (if any)."
+msgstr ""
+"\n"
+"Introduzca la dirección IP para su servidor de dominio secundario (si tiene)."
+
+#: pppconfig:1043
+#, fuzzy
+msgid ""
+"Enter the username of a user who you want to be able to start and stop ppp.  "
+"She will be able to start any connection.  To remove a user run the program "
+"vigr and remove the user from the dip group. "
+msgstr ""
+"\n"
+"Introduzca el nombre de usuario del usuario que quiera que pueda iniciar y "
+"detener ppp. Éste será capaz de iniciar cualquier conexión. Para eliminar un "
+"usuario ejecute el programa «vigr» y elimínelo del grupo «dip». "
+
+#: pppconfig:1044
+msgid "Add User "
+msgstr "Añadir usuario "
+
+#. Make sure the user exists.
+#: pppconfig:1047
+#, fuzzy, perl-format
+msgid ""
+"\n"
+"No such user as %s. "
+msgstr ""
+"\n"
+"No existe el usuario %s. "
+
+#: pppconfig:1060
+#, fuzzy
+msgid ""
+"You probably don't want to change this.  Pppd uses the remotename as well as "
+"the username to find the right password in the secrets file.  The default "
+"remotename is the provider name.  This allows you to use the same username "
+"with different providers.  To disable the remotename option give a blank "
+"remotename.  The remotename option will be omitted from the provider file "
+"and a line with a * instead of a remotename will be put in the secrets file."
+msgstr ""
+"\n"
+"Probablemente no quiera cambiar esto. Pppd usa el nombre remoto así como el "
+"nombre de usuario para encontrar la contraseña correcta en el fichero "
+"«secrets». De forma predeterminada el nombre remoto es el nombre del "
+"proveedor. Esto le permite usar el mismo nombre de usuario con diferentes "
+"proveedores. Para deshabilitar la opción de nombre remoto déjela en blanco. "
+"La opción nombre remoto se omitirá en el fichero «provider» y se pondrá una "
+"línea con * en vez del nombre remoto en el fichero «secrets». \n"
+
+#: pppconfig:1060
+msgid "Remotename"
+msgstr "Nombre remoto"
+
+#: pppconfig:1068
+#, fuzzy
+msgid ""
+"If you want this PPP link to shut down automatically when it has been idle "
+"for a certain number of seconds, put that number here.  Leave this blank if "
+"you want no idle shutdown at all."
+msgstr ""
+"\n"
+"Si quiere que este enlace PPP se cierre automáticamente cuando no se halla "
+"usado durante un número de segundos, ponga ese número aquí. Déjelo en blanco "
+"si no desea habilitar esta característica. \n"
+
+#: pppconfig:1068
+msgid "Idle Timeout"
+msgstr "Tiempo de espera por inactividad"
+
+#. $data =~ s/\n{2,}/\n/gso; # Remove blank lines
+#: pppconfig:1078 pppconfig:1689
+#, perl-format
+msgid "Couldn't open %s.\n"
+msgstr "No se pudo abrir %s.\n"
+
+#: pppconfig:1394 pppconfig:1411 pppconfig:1588
+#, perl-format
+msgid "Can't open %s.\n"
+msgstr "No se puede abrir %s.\n"
+
+#. Get an exclusive lock.  Return if we can't get it.
+#. Get an exclusive lock.  Exit if we can't get it.
+#: pppconfig:1396 pppconfig:1413 pppconfig:1591
+#, perl-format
+msgid "Can't lock %s.\n"
+msgstr "No se puede bloquear %s.\n"
+
+#: pppconfig:1690
+#, perl-format
+msgid "Couldn't print to %s.\n"
+msgstr "No se pudo imprimir a %s.\n"
+
+#: pppconfig:1692 pppconfig:1693
+#, perl-format
+msgid "Couldn't rename %s.\n"
+msgstr "No se pudo renombrar %s.\n"
+
+#: pppconfig:1698
+#, fuzzy
+msgid ""
+"Usage: pppconfig [--version] | [--help] | [[--dialog] | [--whiptail] | [--"
+"gdialog] [--noname] | [providername]]\n"
+"'--version' prints the version.\n"
+"'--help' prints a help message.\n"
+"'--dialog' uses dialog instead of gdialog.\n"
+"'--whiptail' uses whiptail.\n"
+"'--gdialog' uses gdialog.\n"
+"'--noname' forces the provider name to be 'provider'.\n"
+"'providername' forces the provider name to be 'providername'.\n"
+msgstr ""
+"Modo de uso: pppconfig [--version] | [--help] | [[--dialog] | [--whiptail] \n"
+"| [--gdialog] [--noname] | [nombreproveedor]]'\n"
+"'--version' muestra la versión. '--help' muestra un mensaje de ayuda.\n"
+"'--dialog' usa dialog en vez de gdialog. '--whiptail' usa whiptail.\n"
+"'--gdialog' usa gdialog. '--noname' fuerza a que el nombre del proveedor "
+"sea\n"
+"'provider'.  \n"
+"'nombreproveedor' fuerza a que el nombre del proveedor sea "
+"'nombreproveedor'.\n"
+
+#: pppconfig:1711
+#, fuzzy
+msgid ""
+"pppconfig is an interactive, menu driven utility to help automate setting \n"
+"up a dial up ppp connection.  It currently supports PAP, CHAP, and chat \n"
+"authentication.  It uses the standard pppd configuration files.  It does \n"
+"not make a connection to your isp, it just configures your system so that \n"
+"you can do so with a utility such as pon.  It can detect your modem, and \n"
+"it can configure ppp for dynamic dns, multiple ISP's and demand dialing. \n"
+"\n"
+"Before running pppconfig you should know what sort of authentication your \n"
+"isp requires, the username and password that they want you to use, and the \n"
+"phone number.  If they require you to use chat authentication, you will \n"
+"also need to know the login and password prompts and any other prompts and \n"
+"responses required for login.  If you can't get this information from your \n"
+"isp you could try dialing in with minicom and working through the "
+"procedure \n"
+"until you get the garbage that indicates that ppp has started on the other \n"
+"end. \n"
+"\n"
+"Since pppconfig makes changes in system configuration files, you must be \n"
+"logged in as root or use sudo to run it.\n"
+"\n"
+msgstr ""
+"Pppconfig es una utilidad interactiva, dirigida por menús, para ayudarle a "
+"establecer una conexión PPP mediante marcación. Actualmente soporta PAP, "
+"CHAP, y autenticación con «chat». Usa los ficheros de configuración estándar "
+"de pppd. No realiza ninguna conexión con su ISP, sólo configura su sistema "
+"para que pueda hacerla con una utilidad como «pon». Puede detectar su módem, "
+"y puede configurar PPP para tener DNS dinámico, múltiples ISPs y marcación "
+"bajo demanda.\n"
+"Antes de ejecutar pppconfig debería saber que tipo de autenticación requiere "
+"su ISP, el nombre de usuario y la contraseña que quieren que use, y el "
+"número de teléfono. Si necesita usar autenticación «chat», necesitará además "
+"los textos de petición de acceso y contraseña así como cualquier otro tipo "
+"de textos de petición o respuestas necesarias para el acceso. Si no puede "
+"obtener esta información de su ISP puede intentar llamar al proveedor con "
+"«minicom» y seguir con el procedimiento hasta que obtenga los caracteres "
+"raros que le indican que se ha lanzado PPP en el otro extremo.\n"
+"\n"
+"Dado que pppconfig hace cambios en los ficheros de configuración del sistema "
+"debe de ser superusuario o utilizar «sudo» para ejecutarlo.\n"

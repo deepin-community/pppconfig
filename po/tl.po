@@ -1,0 +1,1013 @@
+# translation of pppconfig_po.po to tagalog
+# Copyright (C) 2005 Rick Bahague Jr.
+#
+# This file is distributed under the same license as the pppconfig package.
+# # rick bahague jr <rbahaguejr@gmail.com>, 2005.
+# Rick Bahague Jr <rickjr@cp-union.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pppconfig\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-15 23:03+0100\n"
+"PO-Revision-Date: 2005-02-11 09:46+0800\n"
+"Last-Translator: Rick Bahague Jr <rickjr@cp-union.org>\n"
+"Language-Team: Tagalog <debian-tl@banwa.upm.edu.ph>\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#. Arbitrary upper limits on option and chat files.
+#. If they are bigger than this something is wrong.
+#: pppconfig:69
+msgid "\"GNU/Linux PPP Configuration Utility\""
+msgstr "\"Kasangkapan sa pagsasaayos ng GNU/Linux PPP\" "
+
+#: pppconfig:128
+msgid "No UI\n"
+msgstr "Walang UI\n"
+
+#: pppconfig:131
+msgid "You must be root to run this program.\n"
+msgstr "Kailangang ika'y root upang mapatakbo ang program na ito.\n"
+
+#: pppconfig:132 pppconfig:133
+#, perl-format
+msgid "%s does not exist.\n"
+msgstr "%s hindi matagpuan.\n"
+
+#. Parent
+#: pppconfig:161
+msgid "Can't close WTR in parent: "
+msgstr "Hindi maisara ang WTR sa parent: "
+
+#: pppconfig:167
+msgid "Can't close RDR in parent: "
+msgstr "Hindi maisara ang RDR sa parent: "
+
+#. Child or failed fork()
+#: pppconfig:171
+msgid "cannot fork: "
+msgstr "hindi makapag-fork"
+
+#: pppconfig:172
+msgid "Can't close RDR in child: "
+msgstr "Hindi maisara ang RDR sa child: "
+
+#: pppconfig:173
+msgid "Can't redirect stderr: "
+msgstr "Hindi ma-ituro sa stderr:"
+
+#: pppconfig:174
+msgid "Exec failed: "
+msgstr "Bigo ang Exec:"
+
+#: pppconfig:178
+msgid "Internal error: "
+msgstr "Pagkakamali sa loob:"
+
+#: pppconfig:255
+msgid "Create a connection"
+msgstr "Gumawa ng koneksyon"
+
+#: pppconfig:259
+#, perl-format
+msgid "Change the connection named %s"
+msgstr "Palitan ang koneksyong pinanhalang %s"
+
+#: pppconfig:262
+#, perl-format
+msgid "Create a connection named %s"
+msgstr "Gumawa ng koneksyong may pangalang %s"
+
+#. This section sets up the main menu.
+#: pppconfig:270
+msgid ""
+"This is the PPP configuration utility.  It does not connect to your isp: "
+"just configures ppp so that you can do so with a utility such as pon.  It "
+"will ask for the username, password, and phone number that your ISP gave "
+"you.  If your ISP uses PAP or CHAP, that is all you need.  If you must use a "
+"chat script, you will need to know how your ISP prompts for your username "
+"and password.  If you do not know what your ISP uses, try PAP.  Use the up "
+"and down arrow keys to move around the menus.  Hit ENTER to select an item.  "
+"Use the TAB key to move from the menu to <OK> to <CANCEL> and back.  To move "
+"on to the next menu go to <OK> and hit ENTER. To go back to the previous "
+"menu go to <CANCEL> and hit enter."
+msgstr ""
+"Ito ang gamit sa pagaayos ng PPP. Hindi ito magbibigay ng koneksyon sa "
+"inyong isap: inaayos lamang nito ang ppp upang ang koneksyon ay maari nyong "
+"magamitan ng ibang gamit tulad ng pon. Ito ay magtatanong ng username, "
+"password, at numero ng telepono na ibinigay ng inyong ISP. Kung ang inyong "
+"ISP ay gumagamit ng PAP o CHAP ang mga naunang nabanggit lamang ang inyong "
+"kailangan. Kung kailangan nyong gumamit ng script ng chap, kailangan malaman "
+"nyo kung paano magtanong ng username at password ang inyong ISP. Kung hindi "
+"nyo alam ang ginagamit ng inyong ISP, subukan ang PAP. Gamitin ang mga keys "
+"na arrow up at down upang mabaybay ang mga menus. Pindutin ang ENTER upang "
+"mapili ang item. Gamitin ang key na TAB upang makalipat mula sa menu tungo "
+"sa <OK> o <CANCEL> at pabalik. Upang makalipat sa susunod na menu tumungo sa "
+"<OK> at pindutin ang ENTER. Upang makabalik sa nakaraan menu tumungo sa "
+"<CANCEL> at pindutin ang enter. "
+
+#: pppconfig:271
+msgid "Main Menu"
+msgstr "Pangunahing Menu"
+
+#: pppconfig:273
+msgid "Change a connection"
+msgstr "Palitan ang koneksyon"
+
+#: pppconfig:274
+msgid "Delete a connection"
+msgstr "Burahin ang koneksyon"
+
+#: pppconfig:275
+msgid "Finish and save files"
+msgstr "Tapusin at itago ang files"
+
+#: pppconfig:283
+#, perl-format
+msgid ""
+"Please select the authentication method for this connection.  PAP is the "
+"method most often used in Windows 95, so if your ISP supports the NT or "
+"Win95 dial up client, try PAP.  The method is now set to %s."
+msgstr ""
+"Pumili ng paraan ng authentication para sa kasalukuyang koneksyon. Ang "
+"paraang PAP ay kadalalasang ginagamit sa Windows95. Kung ang inyong ISSSP ay "
+"sinusuportahan and NT client o Win95 dial up client, subukan ang PAP. Ang "
+"paraan ay inilagay na sa %s."
+
+#: pppconfig:284
+#, perl-format
+msgid " Authentication Method for %s"
+msgstr " Paraan ng Authentication para sa %s"
+
+#: pppconfig:285
+msgid "Peer Authentication Protocol"
+msgstr "Protocol sa Peer Authentication"
+
+#: pppconfig:286
+msgid "Use \"chat\" for login:/password: authentication"
+msgstr "Gumagamit ng \"chat\" para sa login:/password: authentication"
+
+#: pppconfig:287
+msgid "Crypto Handshake Auth Protocol"
+msgstr "Crypto Handshake Auth Protocol"
+
+#: pppconfig:309
+msgid ""
+"Please select the property you wish to modify, select \"Cancel\" to go back "
+"to start over, or select \"Finished\" to write out the changed files."
+msgstr ""
+"Piliin and ang katangian na nais na baguhin, piliin and  \"Cancel\" upang "
+"bumalik at magsimulang muli, o kaya'y piliin ang \"Finished\" upang maisulat "
+"ang mga binagong mga files. "
+
+#: pppconfig:310
+#, perl-format
+msgid "\"Properties of %s\""
+msgstr "\"Katangian ng %s\""
+
+#: pppconfig:311
+#, perl-format
+msgid "%s Telephone number"
+msgstr "%s Numero ng Telepono"
+
+#: pppconfig:312
+#, perl-format
+msgid "%s Login prompt"
+msgstr "%s Palatandaan ng Login"
+
+#: pppconfig:314
+#, perl-format
+msgid "%s ISP user name"
+msgstr "%s pangalan ng gumagamit ng ISP"
+
+#: pppconfig:315
+#, perl-format
+msgid "%s Password prompt"
+msgstr "%s Palatandaan ng Password"
+
+#: pppconfig:317
+#, perl-format
+msgid "%s ISP password"
+msgstr "%s Password sa ISP"
+
+#: pppconfig:318
+#, perl-format
+msgid "%s Port speed"
+msgstr "%s Bilis ng Port"
+
+#: pppconfig:319
+#, perl-format
+msgid "%s Modem com port"
+msgstr "%s com port ng Modem"
+
+#: pppconfig:320
+#, perl-format
+msgid "%s Authentication method"
+msgstr "%s Paraan ng Authentication"
+
+#: pppconfig:322
+msgid "Advanced Options"
+msgstr "Higit na mataas na mga pilians"
+
+#: pppconfig:324
+msgid "Write files and return to main menu."
+msgstr "Isulat ang files at bumalik sa pangunahing menu."
+
+#. @menuvar = (gettext("#. This menu allows you to change some of the more obscure settings.  Select #. the setting you wish to change, and select \"Previous\" when you are done. #. Use the arrow keys to scroll the list."),
+#: pppconfig:360
+msgid ""
+"This menu allows you to change some of the more obscure settings.  Select "
+"the setting you wish to change, and select \"Previous\" when you are done. "
+"Use the arrow keys to scroll the list."
+msgstr ""
+"Ang menu na ito ay magpapahintulot upang inyong mabago ang ilan sa mga higit "
+"na obscure na mga settings. Piliin ang setting na nais baguhin, at piliin "
+"ang Previous sa pagkatapos. Gamitin ang arrow keys upang sundan ang listahan."
+
+#: pppconfig:361
+#, perl-format
+msgid "\"Advanced Settings for %s\""
+msgstr "\"Higit na mataas na Settings para sa %s\""
+
+#: pppconfig:362
+#, perl-format
+msgid "%s Modem init string"
+msgstr "%s string ng Modem init"
+
+#: pppconfig:363
+#, perl-format
+msgid "%s Connect response"
+msgstr "%s Tugon ng pagkonek"
+
+#: pppconfig:364
+#, perl-format
+msgid "%s Pre-login chat"
+msgstr "%s sagutan bago mag-login"
+
+#: pppconfig:365
+#, perl-format
+msgid "%s Default route state"
+msgstr "%s Kalagayan ng default route"
+
+#: pppconfig:366
+#, perl-format
+msgid "%s Set ip addresses"
+msgstr "%s ilagay ang mga ip address"
+
+#: pppconfig:367
+#, perl-format
+msgid "%s Turn debugging on or off"
+msgstr "%s Ilagay ang debugging sa on o off"
+
+#: pppconfig:368
+#, perl-format
+msgid "%s Turn demand dialing on or off"
+msgstr "%s Ilagay ang demand dialing sa on o off"
+
+#: pppconfig:369
+#, perl-format
+msgid "%s Turn persist on or off"
+msgstr "%s Ilagay ang persist sa on o off"
+
+#: pppconfig:371
+#, perl-format
+msgid "%s Change DNS"
+msgstr "%s Palitan ang DNS"
+
+#: pppconfig:372
+msgid "                     Add a ppp user"
+msgstr "                     Magdagdag ng taga-gamit ng ppp"
+
+#: pppconfig:374
+#, perl-format
+msgid "%s Post-login chat "
+msgstr "%s Sagutan matapos ang login"
+
+#: pppconfig:376
+#, perl-format
+msgid "%s Change remotename "
+msgstr "%s Palitan ng remotename"
+
+#: pppconfig:378
+#, perl-format
+msgid "%s Idle timeout "
+msgstr "%s natapos ang oras ng Idle"
+
+#. End of SWITCH
+#: pppconfig:389
+msgid "Return to previous menu"
+msgstr "Bumalik sa nakaraang menu"
+
+#: pppconfig:391
+msgid "Exit this utility"
+msgstr "Lumabas sa gamit na ito. "
+
+#: pppconfig:539
+#, perl-format
+msgid "Internal error: no such thing as %s, "
+msgstr "May mali sa loob: walang bagay tulad ng %s"
+
+#. End of while(1)
+#. End of do_action
+#. the connection string sent by the modem
+#: pppconfig:546
+#, fuzzy
+msgid ""
+"Enter the text of connect acknowledgement, if any.  This string will be sent "
+"when the CONNECT string is received from the modem.  Unless you know for "
+"sure that your ISP requires such an acknowledgement you should leave this as "
+"a null string: that is, ''.\n"
+msgstr ""
+"Ipasok ang mga titik ng acknowledgement ng koneksyon, kung mayroon. Ang mga "
+"titik na ito ay ipapadala sa pagtanggap ng titik ng CONNECT mula sa modem. "
+"Maliban na lamang kung siguradong nangangailangan ang inyong ISP ng katulad "
+"na acknowledgement, hayaan itong may titik na null: tulad ng, ''.\n"
+
+#: pppconfig:547
+msgid "Ack String"
+msgstr "Ack String"
+
+#. the login prompt string sent by the ISP
+#: pppconfig:555
+msgid ""
+"Enter the text of the login prompt.  Chat will send your username in "
+"response.  The most common prompts are login: and username:.  Sometimes the "
+"first letter is capitalized and so we leave it off and match the rest of the "
+"word.  Sometimes the colon is omitted.  If you aren't sure, try ogin:."
+msgstr ""
+"Ipasok ang mga titik ng tanong sa login.  Ipapadala ng Chat ang inyong "
+"username bilang tugon. Ang karaniwang tanong ay login: at username:. Minsan "
+"ang unang titik ay malaki at kaya't hahayaan natin itong naka-off at "
+"ihahambing ang iba pang titik ng buong salita. Minsan hindi na isinasama ang "
+"tutuldok. Kung hindi nyo sigurado, subukan ang ogin:."
+
+#: pppconfig:556
+msgid "Login Prompt"
+msgstr "Login Prompt"
+
+#. password prompt sent by the ISP
+#: pppconfig:564
+msgid ""
+"Enter the text of the password prompt.  Chat will send your password in "
+"response. The most common prompt is password:.  Sometimes the first letter "
+"is capitalized and so we leave it off and match the last part of the word."
+msgstr ""
+"Ipasok ang mga titik ng tanong sa password.  Ipapadala ng Chat ang inyong "
+"password bilang tugon. Ang karaniwang tanong ay password:. Minsan ang unang "
+"titik ay malaki at kaya't hahayaan natin itong naka-off at ihahambing ang "
+"huling bahagi ng buong salita."
+
+#: pppconfig:564
+msgid "Password Prompt"
+msgstr "Password Prompt"
+
+#. optional pre-login chat
+#: pppconfig:572
+msgid ""
+"You probably do not need to put anything here.  Enter any additional input "
+"your isp requires before you log in.  If you need to make an entry, make the "
+"first entry the prompt you expect and the second the required response.  "
+"Example: your isp sends 'Server:' and expect you to respond with "
+"'trilobite'.  You would put 'erver trilobite' (without the quotes) here.  "
+"All entries must be separated by white space.  You can have more than one "
+"expect-send pair."
+msgstr ""
+"Maaring hindi na kailangang magdagdag na anuman dito. Ilagay ang karagdagang "
+"kahilingan (input) ng inyong isp upang maka-login. Kung kailangang tugunan "
+"ang kahilingan, ilagay sa una ang inaasahang tanong (prompt) at sa ikalawa "
+"ang kailangang sagot. Halimbawa: ang inyong isp ay hinihiling ang 'Server:' "
+"at kailangang ang inyong tugon ay 'trilobite'. Inyong ilalagay ang 'Server "
+"trilobite' (nang wala ang qoutes) dito. Lahat ng tugon ay dapat hinihiwalay "
+"ng espasyo (white space).  Maaring magkaroon ng higit sa isang pares ng "
+"kahilingan at tugon. "
+
+#: pppconfig:572
+msgid "Pre-Login"
+msgstr "Bago mag-login"
+
+#. post-login chat
+#: pppconfig:580
+msgid ""
+"You probably do not need to change this.  It is initially '' \\d\\c which "
+"tells chat to expect nothing, wait one second, and send nothing.  This gives "
+"your isp time to get ppp started.  If your isp requires any additional input "
+"after you have logged in you should put it here.  This may be a program name "
+"like ppp as a response to a menu prompt.  If you need to make an entry, make "
+"the first entry the prompt you expect and the second the required response.  "
+"Example: your isp sends 'Protocol' and expect you to respond with 'ppp'.  "
+"You would put 'otocol ppp' (without the quotes) here.  Fields must be "
+"separated by white space.  You can have more than one expect-send pair."
+msgstr ""
+"Maaring hindi na kailangan ang pagbabago dito. Ito ang ang panimulang '' \\d"
+"\\c na nagsasabi sa chat na maghintay ng blankong tugon, maghintay ng isang "
+"segundo at magpadala din ng blanko. Ito ay magbibigay panahon sa inyong  isp "
+"upang buhayin ang ppp. Ilagay dito ang tugon sa karagdagang kahilingan "
+"(input) ng inyong isp matapos ang inyong pag-login. Maaring ito ay pangalang "
+"ng program, tulad ng tugon ng ppp sa tanong ng menu (menu prompt). Kung "
+"kailangang tugunan ang kahilingan, ilagay sa una ang inaasahang tanong "
+"(prompt) at sa ikalawa ang kailangang sagot. Halimbawa: ang inyong isp ay "
+"hinihiling ang 'Protocol:' at kailangang ang inyong tugon ay 'ppp'. Inyong "
+"ilalagay ang 'otocol ppp'  (nang wala ang qoutes) dito. Lahat ng tugon ay "
+"dapat hinihiwalay ng espasyo (white space).  Maaring magkaroon ng higit sa "
+"isang pares ng kahilingan at tugon. "
+
+#: pppconfig:580
+msgid "Post-Login"
+msgstr "Matapos ang login"
+
+#: pppconfig:603
+msgid "Enter the username given to you by your ISP."
+msgstr "Ipasok ang username ng ibinigay sa inyo ng inyong ISP"
+
+#: pppconfig:604
+msgid "User Name"
+msgstr "User Name"
+
+#: pppconfig:621
+msgid ""
+"Answer 'yes' to have the port your modem is on identified automatically.  It "
+"will take several seconds to test each serial port.  Answer 'no' if you "
+"would rather enter the serial port yourself"
+msgstr ""
+"Sagutin ng 'yes' upang makilala ang port ng inyong modem. Ito'y gugugol ng "
+"ilang segundo upang masulit ang bawat serial na port. Sagutin ng 'no' kung "
+"nais na ipasok mismo ang magpapasok ng serial port. "
+
+#: pppconfig:622
+msgid "Choose Modem Config Method"
+msgstr "Pumili ng paraan para sa Modem Config"
+
+#: pppconfig:625
+msgid "Can't probe while pppd is running."
+msgstr "Hindi makapag-probe habang tumatakbo ang pppd"
+
+#: pppconfig:632
+#, perl-format
+msgid "Probing %s"
+msgstr "Probing %s"
+
+#: pppconfig:639
+msgid ""
+"Below is a list of all the serial ports that appear to have hardware that "
+"can be used for ppp.  One that seems to have a modem on it has been "
+"preselected.  If no modem was found 'Manual' was preselected.  To accept the "
+"preselection just hit TAB and then ENTER.  Use the up and down arrow keys to "
+"move among the selections, and press the spacebar to select one.  When you "
+"are finished, use TAB to select <OK> and ENTER to move on to the next item. "
+msgstr ""
+"Nakalista sa ibaba ang lahat ng ports na serial na maaaring may kagamitan "
+"(hardware) na magagamit para sa ppp. Ang port na maaaring may modem ay pauna "
+"ng pinili. Kung walang mahanap na modem, paunang pinili ang 'Manual'. Upang "
+"tanggapin ang paunang pinili, pindutin ang TAB at sumunod ang ENTER. Gamitin "
+"ang keys na up at down arrow upang baybayin ang mga pagpipilian at pindutin "
+"ang spacebar upang pumili. Sa pagtatapos, gamitin ang TAB upang piliin ang "
+"<OK> at ang ENTER upang tumungo sa susunod ng item. "
+
+#: pppconfig:639
+msgid "Select Modem Port"
+msgstr "Pumili ng Port ng Modem"
+
+#: pppconfig:641
+msgid "Enter the port by hand. "
+msgstr "Ipasok ang port ng manu-mano"
+
+#: pppconfig:649
+#, fuzzy
+msgid ""
+"Enter the port your modem is on. \n"
+"/dev/ttyS0 is COM1 in DOS. \n"
+"/dev/ttyS1 is COM2 in DOS. \n"
+"/dev/ttyS2 is COM3 in DOS. \n"
+"/dev/ttyS3 is COM4 in DOS. \n"
+"/dev/ttyS1 is the most common.  Note that this must be typed exactly as "
+"shown.  Capitalization is important: ttyS1 is not the same as ttys1."
+msgstr ""
+"Ipasok ang port na naka-on sa inyong modem. \n"
+"/dev/ttyS0 is COM1 in DOS. \n"
+"/dev/ttyS1 is COM2 in DOS. \n"
+"/dev/ttyS2 is COM3 in DOS. \n"
+"/dev/ttyS3 is COM4 in DOS. \n"
+"/dev/ttyS1 ang pinakakaraniwan. Tandaan na dapat mailagay ang tumpak na "
+"katulad ng ipinapakita.  Mahalaga ang malalaking letra:ang ttS1 ay hindi "
+"katulad ng ttys1."
+
+#: pppconfig:655
+msgid "Manually Select Modem Port"
+msgstr "Manu-manong Pumili ng Port ng Modem"
+
+#: pppconfig:670
+msgid ""
+"Enabling default routing tells your system that the way to reach hosts to "
+"which it is not directly connected is via your ISP.  This is almost "
+"certainly what you want.  Use the up and down arrow keys to move among the "
+"selections, and press  the spacebar to select one.  When you are finished, "
+"use TAB to select <OK> and ENTER to move on to the next item."
+msgstr ""
+"Ang paguhay ng default routing ay magsasabi sa inyong system na ang pagkabit "
+"sa ibang hosts ng hindi direktang nakakabit dito ay sa pamamagitan ng ISP. "
+"Ito ay kadalasang inyong nanaisin.  Gamitin ang keys na up at down arrow "
+"upang baybayin ang mga pagpipilian at pindutin ang spacebar upang pumili. Sa "
+"pagtatapos, gamitin ang TAB upang piliin ang <OK> at ang ENTER upang tumungo "
+"sa susunod ng item. "
+
+#: pppconfig:671
+msgid "Default Route"
+msgstr "Default Route"
+
+#: pppconfig:672
+msgid "Enable default route"
+msgstr "Buhayin ang default na route"
+
+#: pppconfig:673
+msgid "Disable default route"
+msgstr "Patayin ang default na route"
+
+#: pppconfig:680
+#, fuzzy
+#| msgid ""
+#| "You almost certainly do not want to change this from the default value of "
+#| "noipdefault.  This not the place for your nameserver ip numbers.  It is "
+#| "the place for your ip number if and only if your ISP has assigned you a "
+#| "static one.  If you have been given only a local static ip, enter it with "
+#| "a colon at the end, like this: 192.168.1.2:  If you have been given both "
+#| "a local and a remote ip, enter the local ip, a colon, and the remote ip, "
+#| "like this: 192.168.1.2:10.203.1.2 "
+msgid ""
+"You almost certainly do not want to change this from the default value of "
+"noipdefault. This is not the place for your nameserver ip numbers.  It is "
+"the place for your ip number if and only if your ISP has assigned you a "
+"static one.  If you have been given only a local static ip, enter it with a "
+"colon at the end, like this: 192.168.1.2:  If you have been given both a "
+"local and a remote ip, enter the local ip, a colon, and the remote ip, like "
+"this: 192.168.1.2:10.203.1.2"
+msgstr ""
+"Hindi na nanaisin na baguhin ang mga ito mula sa karaniwang (default) halaga "
+"ng noipdefault. Hindi ito para sa numero ng ip ng nameserver. Ito ay para "
+"sa  numero ng inyong ip sakaling binigyan ng static ip. Kung binigyan lamang "
+"ng static ip na lokal, ilagay ito ng mga tutuldok sa huli, tulad ng "
+"192.168.1.2:  Kung binigyan ng parehong lokal at ip na remote, ilagay ang ip "
+"na lokal at tutuldok, at ang ip na remote, tulad ng 192.168.1.2:10.203.1.2 "
+
+#: pppconfig:681
+msgid "IP Numbers"
+msgstr "Mga numero ng IP"
+
+#. get the port speed
+#: pppconfig:688
+msgid ""
+"Enter your modem port speed (e.g. 9600, 19200, 38400, 57600, 115200).  I "
+"suggest that you leave it at 115200."
+msgstr ""
+"Ipasok ang bilis ng port ng inyong modem (e.g. 9600, 19200, 38400, 57600, "
+"115200)  Iminumungkahi na hayaan ito sa 115200. "
+
+#: pppconfig:689
+msgid "Speed"
+msgstr "Bilis"
+
+#: pppconfig:697
+msgid ""
+"Enter modem initialization string.  The default value is ATZ, which tells "
+"the modem to use it's default settings.  As most modems are shipped from the "
+"factory with default settings that are appropriate for ppp, I suggest you "
+"not change this."
+msgstr ""
+"Ilagay ang parirala (string) sa pagbuhay ng modem. Ang karaniwang (default) "
+"parirala ay ATZ, na nagsasabi sa modem na gamitin ang karaniwang kalagayan "
+"(settings). Dahil ang karamihan sa mga modem ay inilalabas sa pagawaan ng "
+"may karaniwang kalagayan para sa ppp, iminumungkahing huwag na itong "
+"baguhin.  "
+
+#: pppconfig:698
+msgid "Modem Initialization"
+msgstr "Sinisimulang paganahin ang Modem"
+
+#: pppconfig:711
+msgid ""
+"Select method of dialing.  Since almost everyone has touch-tone, you should "
+"leave the dialing method set to tone unless you are sure you need pulse.  "
+"Use the up and down arrow keys to move among the selections, and press the "
+"spacebar to select one.  When you are finished, use TAB to select <OK> and "
+"ENTER to move on to the next item."
+msgstr ""
+"Pumili ng paraan sa pag-dial. Dahil karamihan ay may touch-tone, hayaang ang "
+"paraang ng pag-dial ay nakalagay sa tone maliban na lamang kung siguradong "
+"ito'y pulse.  Gamitin ang keys na up at down arrow upang baybayin ang mga "
+"pagpipilian at pindutin ang spacebar upang pumili. Sa pagtatapos, gamitin "
+"ang TAB upang piliin ang <OK> at ang ENTER upang tumungo sa susunod ng item. "
+
+#: pppconfig:712
+msgid "Pulse or Tone"
+msgstr "Pulse o Tono"
+
+#. Now get the number.
+#: pppconfig:719
+msgid ""
+"Enter the number to dial.  Don't include any dashes.  See your modem manual "
+"if you need to do anything unusual like dialing through a PBX."
+msgstr ""
+"Ipasok ang numerong idadayal. Huwag isama ang anumang dashes.  Balikan ang "
+"inyong manwal ng modemkung kailangan nyong gumawa ng hindi pangkaraniwan "
+"tulad ng pagdayal sa PABX."
+
+#: pppconfig:720
+msgid "Phone Number"
+msgstr "Numero ng telepono"
+
+#: pppconfig:732
+msgid "Enter the password your ISP gave you."
+msgstr "Ipasok ang username ng ibinigay sa inyo ng inyong ISP"
+
+#: pppconfig:733
+msgid "Password"
+msgstr "Password"
+
+#: pppconfig:797
+msgid ""
+"Enter the name you wish to use to refer to this isp.  You will probably want "
+"to give the default name of 'provider' to your primary isp.  That way, you "
+"can dial it by just giving the command 'pon'.  Give each additional isp a "
+"unique name.  For example, you might call your employer 'theoffice' and your "
+"university 'theschool'.  Then you can connect to your isp with 'pon', your "
+"office with 'pon theoffice', and your university with 'pon theschool'.  "
+"Note: the name must contain no spaces."
+msgstr ""
+"Ilagay ang pangalan na nais itawag sa isp. Maaring nanaisin nyong ilagay ang "
+"karaniwang (default) pangalan ng provider sa pangalan ng pangunahing isp. Sa "
+"ganitong paraan, maari itong i-dial sa pagbigay ng command na pon. Bigyan "
+"ang bawat karagdagang isp ng ibang pangalan. Halimbawa, maaring tawagin ang "
+"amo bilang 'theoffice' at ang unibersidad bilang 'theschool'. Sa gayon, "
+"maaring kumabit sa isp sa pamamagitan ng pon, sa amo sa pamamagitan ng 'pon "
+"theoffice', at sa unibersidad sa pamamagitan ng 'pon theschool'.  Tandaan "
+"ang pangalan ay dapat walang espasyo."
+
+#: pppconfig:798
+msgid "Provider Name"
+msgstr "Pangalan ng Provider"
+
+#: pppconfig:802
+msgid "This connection exists.  Do you want to overwrite it?"
+msgstr "Ang koneksyon itong ay nakalagay na. Nais mo bang palitan ito? "
+
+#: pppconfig:803
+msgid "Connection Exists"
+msgstr "Ang koneksyon ay nakalagay na"
+
+#: pppconfig:816
+#, perl-format
+msgid ""
+"Finished configuring connection and writing changed files.  The chat strings "
+"for connecting to the ISP are in /etc/chatscripts/%s, while the options for "
+"pppd are in /etc/ppp/peers/%s.  You may edit these files by hand if you "
+"wish.  You will now have an opportunity to exit the program, configure "
+"another connection, or revise this or another one."
+msgstr ""
+"Tapos na ang pag-aayos ng koneksyon at pagsusulat sa binagong salansan "
+"(files). Ang mga parirala (strings) ng chat para sa pagkabit sa ISP ay nasa /"
+"etc/chatscripts/%s habang ang mga pagpipilian para sa pppd ay nasa /etc/ppp/"
+"peers%s. Maaaring baguhin ang salansan kung nanaisin. Maari na lumabas sa "
+"program, mag-ayos ng bagong koneksyon o baguhin ang kasalukuyang koneksyon o "
+"ang iba pa. "
+
+#: pppconfig:817
+msgid "Finished"
+msgstr "Tapos na"
+
+#. this sets up new connections by calling other functions to:
+#. - initialize a clean state by zeroing state variables
+#. - query the user for information about a connection
+#: pppconfig:853
+msgid "Create Connection"
+msgstr "Gumawa ng koneksyon"
+
+#: pppconfig:886
+msgid "No connections to change."
+msgstr "Walang koneksyon na babaguhin."
+
+#: pppconfig:886 pppconfig:890
+msgid "Select a Connection"
+msgstr "Pumili ng koneksyon"
+
+#: pppconfig:890
+msgid "Select connection to change."
+msgstr "Pumili ng koneksyon na babaguhin"
+
+#: pppconfig:913
+msgid "No connections to delete."
+msgstr "Walang koneksyon na buburahin."
+
+#: pppconfig:913 pppconfig:917
+msgid "Delete a Connection"
+msgstr "Burahin ang koneksyon"
+
+#: pppconfig:917
+msgid "Select connection to delete."
+msgstr "Pumili ng koneksyon na buburahin"
+
+#: pppconfig:917 pppconfig:919
+msgid "Return to Previous Menu"
+msgstr "Bumalik sa Nakaraang Menu"
+
+#: pppconfig:926
+msgid "Do you wish to quit without saving your changes?"
+msgstr "Nais mo bang lumabas ng hindi iniimbak ang iyong mga binago?"
+
+#: pppconfig:926
+msgid "Quit"
+msgstr "Lumabas"
+
+#: pppconfig:938
+msgid "Debugging is presently enabled."
+msgstr ""
+
+#: pppconfig:938
+msgid "Debugging is presently disabled."
+msgstr ""
+
+#: pppconfig:939
+#, fuzzy, perl-format
+msgid "Selecting YES will enable debugging.  Selecting NO will disable it. %s"
+msgstr ""
+"Ang papili ng YES ay bubuhay sa debugging. Ang papili ng NO ay papatay nito. "
+"Ang debugging ay kasalukuyang %s."
+
+#: pppconfig:939
+msgid "Debug Command"
+msgstr "Command sa Debug"
+
+#: pppconfig:954
+#, fuzzy, perl-format
+#| msgid ""
+#| "Selecting YES will enable demand dialing for this provider.  Selecting NO "
+#| "will disable it.  Note that you will still need to start pppd with pon: "
+#| "pppconfig will not do that for you.  When you do so, pppd will go into "
+#| "the background and wait for you to attempt access something on the Net, "
+#| "and then dial up the ISP.  If you do enable demand dialing you will also "
+#| "want to set an idle-timeout so that the link will go down when it is "
+#| "idle.  Demand dialing is presently %s."
+msgid ""
+"Selecting YES will enable demand dialing for this provider.  Selecting NO "
+"will disable it.  Note that you will still need to start pppd with pon: "
+"pppconfig will not do that for you.  When you do so, pppd will go into the "
+"background and wait for you to attempt to access something on the Net, and "
+"then dial up the ISP.  If you do enable demand dialing you will also want to "
+"set an idle-timeout so that the link will go down when it is idle.  Demand "
+"dialing is presently %s."
+msgstr ""
+"Ang pagpili ng YES ay bubuhay sa demand dialing. Ang pagpili ng NO ay "
+"papatay dito. Tandaan na kinakailangang muling buhayin ang pppd ng pon. "
+"Hindi ito gagawin ng pppconfig. Sa pagbuhay ng pppd gamit ang pon, ang pppd "
+"ay nasa likod lamang at maghihintay ng pagsubok ng pagtanaw ng anuman sa Net "
+"at saka pa lamang mag-dial sa isp. Kapag binuhay ang demand dialing nanaisin "
+"ding isaayos ang pagtatapos ng oras ng idle upang maputol ang koneksyon "
+"kapag hindi makakabit. Ang demand dialing ay kasalukuyang %s."
+
+#: pppconfig:954
+msgid "Demand Command"
+msgstr "Demand Command"
+
+#: pppconfig:968
+#, perl-format
+msgid ""
+"Selecting YES will enable persist mode.  Selecting NO will disable it.  This "
+"will cause pppd to keep trying until it connects and to try to reconnect if "
+"the connection goes down.  Persist is incompatible with demand dialing: "
+"enabling demand will disable persist.  Persist is presently %s."
+msgstr ""
+"Ang pagpili ng YES ay bubuhay sa persist mode. Ang pagpili ng NO ay papatay "
+"dito. Ito ay magbibigay dahilan sa pppd upang magsumikap hanggang makakabit "
+"at sumubok muli upang makakabit sa pagkakataong hindi makagawa ng koneksyon. "
+"Ang persist at hindi tugma sa demand dialing. Ang pagbuhay sa demand ay "
+"papatay sa persist. Ang persist ay kasalukuyang %s."
+
+#: pppconfig:968
+msgid "Persist Command"
+msgstr "Persist Command"
+
+#: pppconfig:992
+msgid ""
+"Choose a method.  'Static' means that the same nameservers will be used "
+"every time this provider is used.  You will be asked for the nameserver "
+"numbers in the next screen.  'Dynamic' means that pppd will automatically "
+"get the nameserver numbers each time you connect to this provider.  'None' "
+"means that DNS will be handled by other means, such as BIND (named) or "
+"manual editing of /etc/resolv.conf.  Select 'None' if you do not want /etc/"
+"resolv.conf to be changed when you connect to this provider.  Use the up and "
+"down arrow keys to move among the selections, and press the spacebar to "
+"select one.  When you are finished, use TAB to select <OK> and ENTER to move "
+"on to the next item."
+msgstr ""
+"Pumili ng paraan. Ang 'Static' ay nangangahulugan ng parehong nameserver ang "
+"gagamitin sa bawat paggamit ng provider na ito. Tatanungin ang numero ng "
+"nameserver sa susunod na screen. Ang 'Dynamic' ay nangangahulugang kukunin "
+"ng pppd ang numero ng nameserver sa bawat pagkabit. Ang 'None' ay "
+"nangangahulugang ang DNS ay hahawakan ng iba pang paraan, tulad ng BIND "
+"(named) o sariling pag-aayos ng /etc/resolv.conf. Piliin ang 'None' kung "
+"hindi nanaising baguhin ang /etc/resolv.conf kapag kumabit sa provider. "
+"Gamitin ang keys na up at down arrow upang baybayin ang mga pagpipilian at "
+"pindutin ang spacebar upang pumili. Sa pagtatapos, gamitin ang TAB upang "
+"piliin ang <OK> at ang ENTER upang tumungo sa susunod ng item.  "
+
+#: pppconfig:993
+msgid "Configure Nameservers (DNS)"
+msgstr "Ayusin ang Nameservers (DNS)"
+
+#: pppconfig:994
+msgid "Use static DNS"
+msgstr "Gumamit ng static DNS"
+
+#: pppconfig:995
+msgid "Use dynamic DNS"
+msgstr "Gumamit ng Dynamic DNS"
+
+#: pppconfig:996
+msgid "DNS will be handled by other means"
+msgstr "Ang DNS ay hahawakang ng ibang paraan"
+
+#: pppconfig:1001
+#, fuzzy
+msgid ""
+"\n"
+"Enter the IP number for your primary nameserver."
+msgstr ""
+"\n"
+"Ipasok ang numero ng IP ng iyong pangunahing nameserver"
+
+#: pppconfig:1002 pppconfig:1012
+msgid "IP number"
+msgstr "Nmero ng IP"
+
+#: pppconfig:1012
+msgid "Enter the IP number for your secondary nameserver (if any)."
+msgstr ""
+"Ipasok ang numero ng IP ng iyong pangalawang nameserver (sa pagkakataong "
+"kayo'y mayroon)."
+
+#: pppconfig:1043
+msgid ""
+"Enter the username of a user who you want to be able to start and stop ppp.  "
+"She will be able to start any connection.  To remove a user run the program "
+"vigr and remove the user from the dip group. "
+msgstr ""
+"Ilagay ang username ng taga-gamit na nais magkaroon ng karapatang buhayin "
+"(start) at patayin (stop) ang ppp. Mabubuhay ng taga-gamit ang anumang "
+"koneksyon. Upang tanggalin ang taga-gamit patakbuhin ang vigr program at "
+"tanggalin ang taga-gamit mula sa grupong dip."
+
+#: pppconfig:1044
+msgid "Add User "
+msgstr "Magdagdag ng User"
+
+#. Make sure the user exists.
+#: pppconfig:1047
+#, fuzzy, perl-format
+msgid ""
+"\n"
+"No such user as %s. "
+msgstr ""
+"\n"
+"Walang user na %s."
+
+#: pppconfig:1060
+msgid ""
+"You probably don't want to change this.  Pppd uses the remotename as well as "
+"the username to find the right password in the secrets file.  The default "
+"remotename is the provider name.  This allows you to use the same username "
+"with different providers.  To disable the remotename option give a blank "
+"remotename.  The remotename option will be omitted from the provider file "
+"and a line with a * instead of a remotename will be put in the secrets file."
+msgstr ""
+"Maaring hindi na kailangan ang pagbabago dito.  Ginagamit ng Pppd ang "
+"remotename at maging ang username upang mahanap ang tamang password sa "
+"salansang (file) secret. Ang karaniwang remotename ay pangalang ibinigay ng "
+"provider. Ito ay nagbibigay pagkakataon upang magamit ang parehong username "
+"kahit sa iba-ibang provider. Upang hindi paganahin ang remotename hayaang "
+"lagyan ng blanko ang remotename. Ang remotename ay tatanggalin sa salansan "
+"ng provider at sa halip ang linyang may a* ay ilalagay sa sa salansang "
+"secret."
+
+#: pppconfig:1060
+msgid "Remotename"
+msgstr "Remotename"
+
+#: pppconfig:1068
+msgid ""
+"If you want this PPP link to shut down automatically when it has been idle "
+"for a certain number of seconds, put that number here.  Leave this blank if "
+"you want no idle shutdown at all."
+msgstr ""
+"Kung nais na putulin ang pagkakakabit ng PPP na walang tulong matapos ang "
+"ilang segundo, ilagay ang numero dito. Hayaang walang tugon ito kung hindi "
+"nais ang pagputol ng walang tulong. "
+
+#: pppconfig:1068
+msgid "Idle Timeout"
+msgstr "Natapos na ang oras ng Idle"
+
+#. $data =~ s/\n{2,}/\n/gso; # Remove blank lines
+#: pppconfig:1078 pppconfig:1689
+#, perl-format
+msgid "Couldn't open %s.\n"
+msgstr "Hindi mabuksan ang %s.\n"
+
+#: pppconfig:1394 pppconfig:1411 pppconfig:1588
+#, perl-format
+msgid "Can't open %s.\n"
+msgstr "Hindi mabuksan ang %s.\n"
+
+#. Get an exclusive lock.  Return if we can't get it.
+#. Get an exclusive lock.  Exit if we can't get it.
+#: pppconfig:1396 pppconfig:1413 pppconfig:1591
+#, perl-format
+msgid "Can't lock %s.\n"
+msgstr "Hindi masarhan ang %s.\n"
+
+#: pppconfig:1690
+#, perl-format
+msgid "Couldn't print to %s.\n"
+msgstr "Hindi makapag-print sa %s.\n"
+
+#: pppconfig:1692 pppconfig:1693
+#, perl-format
+msgid "Couldn't rename %s.\n"
+msgstr "Hindi mabago ang pangalan%s.\n"
+
+#: pppconfig:1698
+#, fuzzy
+msgid ""
+"Usage: pppconfig [--version] | [--help] | [[--dialog] | [--whiptail] | [--"
+"gdialog] [--noname] | [providername]]\n"
+"'--version' prints the version.\n"
+"'--help' prints a help message.\n"
+"'--dialog' uses dialog instead of gdialog.\n"
+"'--whiptail' uses whiptail.\n"
+"'--gdialog' uses gdialog.\n"
+"'--noname' forces the provider name to be 'provider'.\n"
+"'providername' forces the provider name to be 'providername'.\n"
+msgstr ""
+"Paggamit: pppconfig [--version] | [--help] | [[--dialog] | [--whiptail] | [--"
+"gdialog]\n"
+" [--noname] | [providername]]\n"
+"'--version' prints the version. '--help' prints a help message.\n"
+"'--dialog' uses dialog instead of gdialog. '--whiptail' uses whiptail.\n"
+"'--gdialog' uses gdialog.  '--noname' forces the provider name to be "
+"'provider'.  \n"
+"'providername' forces the provider name to be 'providername'.\n"
+
+#: pppconfig:1711
+#, fuzzy
+msgid ""
+"pppconfig is an interactive, menu driven utility to help automate setting \n"
+"up a dial up ppp connection.  It currently supports PAP, CHAP, and chat \n"
+"authentication.  It uses the standard pppd configuration files.  It does \n"
+"not make a connection to your isp, it just configures your system so that \n"
+"you can do so with a utility such as pon.  It can detect your modem, and \n"
+"it can configure ppp for dynamic dns, multiple ISP's and demand dialing. \n"
+"\n"
+"Before running pppconfig you should know what sort of authentication your \n"
+"isp requires, the username and password that they want you to use, and the \n"
+"phone number.  If they require you to use chat authentication, you will \n"
+"also need to know the login and password prompts and any other prompts and \n"
+"responses required for login.  If you can't get this information from your \n"
+"isp you could try dialing in with minicom and working through the "
+"procedure \n"
+"until you get the garbage that indicates that ppp has started on the other \n"
+"end. \n"
+"\n"
+"Since pppconfig makes changes in system configuration files, you must be \n"
+"logged in as root or use sudo to run it.\n"
+"\n"
+msgstr ""
+"Ang pppconfig ay isang interaktib na kasangkapan at gumagamit ng menu upang "
+"maisaayos \n"
+"ang koneksyong ppp na dial up. Suportado nito ang PAP, CHAP at pagpapatunay "
+"(authentication) \n"
+"sa paraang chat. Ito ay gumagamit ng pangkaraniwang salansan ng isinaayos na "
+"pppd. Hindi ito \n"
+"kumakabit sa isp bagkus isinasaayos lamang nito ang sistema upang makakabit "
+"sa pamamagitan \n"
+"ng ibang kasangkapan tulad ng pon. Malalaman nito ang modem na nakakabit at "
+"maisasaayos nito \n"
+"ang ppp para sa dynamic na dns, maramihang ISPs at demand dialing.\n"
+"\n"
+"Bago gamitin ang pppconfig dapat paunang malaman ang paraan ng pagpapatunay "
+"na ginagamit ng \n"
+"  isp, ang username at password na nais nilang gamitin. at ang numero ng "
+"telepono. Kung kinakailangang \n"
+"gumamit ng pagpapatunay sa paraang chat, kakailanganin din ang mga tanong "
+"(prompts) para sa login at \n"
+"password at iba pa at ang mga sagot para sa pag-login. Kung hindi makukuha "
+"ang mga nabanggit na mga \n"
+"impormasyon mula sa isp subukang mag-dial gamit ang minicom at sundan ang "
+"direksyon \n"
+"hanggat makuha ang basurang (garbage) nagsasaad ng pagsimula ng ppp sa "
+"kabilang dulo. \n"
+"\n"
+"Binabago ng pppconfig ang salansan ng sistema, kailangang makapasok bilang "
+"root o gingamit ang sudo upang\n"
+" mapatakbo ang pppconfig. \n"
+"\n"
